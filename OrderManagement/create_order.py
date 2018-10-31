@@ -9,14 +9,14 @@ from Global_base import global_base
 class OrderCreate(unittest.TestCase):
 
     def setUp(self):
-        self.url = global_base.Base.url
-        self.headers = global_base.Base.headers
+        self.url = global_base.DefTool.url(self, 'api/order/create')
+        self.headers = global_base.Utils.token(self)
 
     def tearDown(self):
         pass
 
     def test_create_order_success(self):
-        payload = {"product_id": "", "product_count": "", "pay_type": "", "address_id": ""}
+        payload = {"product_id": "lYaDb7EjKK3LONk5", "product_count": 1, "pay_type": 4000, "address_id": ""}
         result = requests.post(url=self.url, headers=self.headers, data=payload).json()
         self.assertEqual(result["status"], 200)
         self.assertEqual(result["message"], "请求成功")
