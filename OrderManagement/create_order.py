@@ -15,11 +15,14 @@ class OrderCreate(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_order_success(self):
-        payload = {"product_id": "lYaDb7EjKK3LONk5", "product_count": 1, "pay_type": 4000, "address_id": ""}
+    @parameterized.expand([
+            ("必填项输入正确，新建订单成功", "lYaDb7EjKK3LONk5", 1, 4000, 1, 200, "请求成功"),
+    ])
+    def test_create_order_success(self, casename,product_id, product_count, pay_type, address_id, status, message):
+        payload = {"product_id": product_id, "product_count": product_count, "pay_type": pay_type, "address_id": address_id}
         result = requests.post(url=self.url, headers=self.headers, data=payload).json()
-        self.assertEqual(result["status"], 200)
-        self.assertEqual(result["message"], "请求成功")
+        self.assertEqual(result["status"], status)
+        self.assertEqual(result["message"], message)
 
 
 if __name__ == "__main__":
