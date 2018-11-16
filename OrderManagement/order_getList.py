@@ -45,8 +45,16 @@ class GetList(unittest.TestCase):
     def test_getList_fail(self):
         self.res = requests.get(url=self.u, headers=self.h).json()
         self.assertEqual(self.res['status'], 200)
+        self.assertEqual(self.res['message'], '请求成功')
+        self.assertEqual(self.res['data'], '请求成功')
+
 
 
 
 if __name__ == "__main__":
     unittest.main()
+
+'''
+获取订单列表接口
+根据用户ID及订单状态获取订单列表
+'''

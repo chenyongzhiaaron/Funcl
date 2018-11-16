@@ -22,3 +22,9 @@ class GetNumber(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+'''
+获取叮当详情接口
+根据Order Number获取订单详细信息
+'''

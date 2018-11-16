@@ -4,6 +4,8 @@ import requests
 
 from Global_base import global_base
 
+a = '''asd'''
+print(a)
 
 class GetOne(unittest.TestCase):
     def setUp(self):

@@ -31,4 +31,4 @@ class FunCodeProductInfo(unittest.TestCase):
 if __name__=="__main__":
     unittest.main()
 
-#  这个接口还没有完善
+#  这个接口还没有完善,api 有问题。

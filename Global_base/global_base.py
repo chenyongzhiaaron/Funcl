@@ -5,13 +5,13 @@ from db_fixture import test_db
 
 class Utils():
     def token(self):
-        headers1 = {'Accept': 'application/json', "Access-Token": '18127813600'}
-        url1 = DefTool.url(self, "api/auth/captcha?mobile=18127813600")
+        headers1 = {'Accept': 'application/json', "Access-Token": '17727498114'}
+        url1 = DefTool.url(self, "api/auth/captcha?mobile=17727498114")
         url2 = DefTool.url(self, 'api/auth/login')
         re = requests.get(url=url1, headers=headers1).json()
         # print(re)
         number = test_db.T_DB.t_db(self)
-        payload = {"mobile": 18127813600, "verify_code": number}
+        payload = {"mobile": 17727498114, "verify_code": number}
         response = requests.post(url=url2, data=payload, headers=headers1).json()
         # print(response)
         t = response['data']['access_token']
@@ -20,7 +20,7 @@ class Utils():
         h = {
             'Accept': 'application/json',
             'Authorization': access_token,
-            "Access-Token": '18127813600'
+            "Access-Token": '17727498114'
         }
         print(h)
         return h
@@ -35,6 +35,6 @@ class DefTool():
     def defHeaders(self):
         headers = {
             'Accept': 'application/json',
-            "Access-Token": '18127813600'
+            "Access-Token": '17727498114'
         }
         return headers

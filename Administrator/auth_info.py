@@ -15,7 +15,7 @@ class AuthInfo(unittest.TestCase):
         self.assertEqual(self.r['status'], 200)
         self.assertEqual(self.r['message'], '请求成功')
         self.assertEqual(self.r['data']['brand'], 1000)
-        self.assertEqual(self.r['data']['mobile'], 18127813600)
+        self.assertEqual(self.r['data']['mobile'], 17727498114)
 
     def tearDown(self):
         print(self.r)
