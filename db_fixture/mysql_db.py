@@ -37,7 +37,8 @@ class DB:
     # clear table data
     def clear(self, table_name):
         # real_sql = "truncate table " + table_name + ";"
-        real_sql = "delete from " + table_name + ";"
+        # real_sql = "delete from " + table_name + ";"    # 这是清光表数据
+        real_sql = "delete from " + table_name + " where user_id = 349 and id >20;"    # 这是清空特定行数据
         with self.connection.cursor() as cursor:
             cursor.execute("SET FOREIGN_KEY_CHECKS=0;")
             cursor.execute(real_sql)
@@ -50,7 +51,7 @@ class DB:
         key = ','.join(table_data.keys())
         value = ','.join(table_data.values())
         real_sql = "INSERT INTO " + table_name + " (" + key + ") VALUES (" + value + ")"
-        # print(real_sql)
+        print(real_sql)
 
         with self.connection.cursor() as cursor:
             cursor.execute(real_sql)
@@ -69,15 +70,20 @@ class DB:
                 self.insert(table, d)
         self.close()
 
-
-if __name__ == '__main__':
-    db = DB()
-    table_name = "repositories"
-    data = {'id': 1, 'name': '红米', '`limit`': 2000, 'status': 1, 'address': '北京会展中心',
-            'start_time': '2016-08-20 00:25:42'}
-    table_name2 = "sign_guest"
-    data2 = {'realname': 'alen', 'phone': 12312341234, 'email': 'alen@mail.com', 'sign': 0, 'event_id': 1}
-
-    db.clear(table_name)
-    db.insert(table_name, data)
-    db.close()
+#
+# if __name__ == '__main__':
+#     db = DB()
+#     table_name = "user_address"
+#     data = {'user_id': 349, 'deliver_name': '测试工作者', 'deliver_phone': 13800138000, 'deliver_address_country_id': 44,
+#             'deliver_address_province_id': 11,
+#             'deliver_address_city_id': 1101, 'deliver_address_district_id': 110101, "deliver_address": "测试办公室",
+#             "created_at": "2018-11-28 19:10:00", "updated_at": "2018-11-28 19:10:00",
+#             "deliver_address_country_name": "中国",
+#             "deliver_address_province_name": "北京市", "deliver_address_city_name": "市辖区",
+#             "deliver_address_district_name": "东城区"}
+#     # table_name2 = "sign_guest"
+#     # data2 = {'realname': 'alen', 'phone': 12312341234, 'email': 'alen@mail.com', 'sign': 0, 'event_id': 1}
+#
+#     db.clear(table_name)
+#     db.insert(table_name, data)
+#     db.close()
