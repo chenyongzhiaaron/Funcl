@@ -9,7 +9,7 @@ from Global_base import global_base
 class OrderPay(unittest.TestCase):
     def setUp(self):
         self.url = global_base.DefTool.url(self, 'api/order/pay')
-        self.headers = global_base.Utils.token(self)
+        self.headers = global_base.DefTool.defaultHeaders(self)
 
     def tearDown(self):
         print(self.result)

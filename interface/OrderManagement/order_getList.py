@@ -8,7 +8,7 @@ from Global_base import global_base
 class GetList(unittest.TestCase):
     def setUp(self):
         self.u = global_base.DefTool.url(self, 'api/order/getList')
-        self.h = global_base.Utils.token(self)
+        self.h = global_base.DefTool.defaultHeaders(self)
 
     def tearDown(self):
         # print(self.result)
@@ -47,7 +47,6 @@ class GetList(unittest.TestCase):
         self.res = requests.get(url=self.u, headers=self.h).json()
         self.assertEqual(self.res['status'], 200)
         self.assertEqual(self.res['message'], '请求成功')
-        self.assertEqual(self.res['data'], '请求成功')
 
 
 

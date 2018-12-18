@@ -16,8 +16,8 @@ class NewAddress(unittest.TestCase):
         print(self.result)
 
     @parameterized.expand([
-        ("传入正确必填项，新建默认地址成功", "测试收货人名称", 18100181000, 11, 1101, 110105, "测试地址名称", 1, 200, '请求成功'),
-        ("传入正确必填项，新建非默认地址成功", "测试收货人名称", 18100181000, 11, 1101, 110105, "测试地址名称", 0, 200, '请求成功'),
+        ("传入正确必填项，新建默认地址成功", "测试收货人名称", 17727475174, 11, 1101, 110105, "测试地址名称", 1, 200, '请求成功'),
+        ("传入正确必填项，新建非默认地址成功", "测试收货人名称", 17727475174, 11, 1101, 110105, "测试地址名称", 0, 200, '请求成功'),
     ])
     def test_new_address_success(self, case, deliver_name, deliver_phone, deliver_address_province_id,
                                  deliver_address_city_id, deliver_address_district_id, deliver_address,

@@ -9,15 +9,17 @@ from Global_base import global_base
 class FunCode(unittest.TestCase):
     def setUp(self):
         self.u = global_base.DefTool.url(self, "api/funCode/getInfo")
-        self.h = global_base.Utils.token(self)
+        self.h = global_base.DefTool.defaultHeaders(self)
+        # self.u = "https://test.api.funcl.com.cn/api/funCode/getInfo"
 
     def tearDown(self):
         print(self.result)
 
     @parameterized.expand([
-        ("code 正确，请求成功", "FJ2U89H198H928H9", 200, "请求成功", "wONZeKmv0R3Gkb9r"),
-        ("code 正确，起始前加空格，请求成功", " FJ2U89H198H928H9", 200, "请求成功", "wONZeKmv0R3Gkb9r"),
-        ("code 正确，结束后加空格，请求成功", "FJ2U89H198H928H9 ", 200, "请求成功", "wONZeKmv0R3Gkb9r")
+        ("code 正确，请求成功", "FJ2U89H198H928H9", 200, "请求成功", "j6WdKJEXOKmarZpA"),
+        ("code 正确，起始前加空格，请求成功", " FJ2U89H198H928H9", 200, "请求成功", "j6WdKJEXOKmarZpA"),
+        ("code 正确，结束后加空格，请求成功", "FJ2U89H198H928H9 ", 200, "请求成功", "j6WdKJEXOKmarZpA"),
+        ("code 未到期，，请求成功", "FJ2U89H198H928H9 ", 200, "请求成功", "j6WdKJEXOKmarZpA")
     ])
     def test_funCode_success(self, case, code, status, message, data):
         ''' funCode 正确，获取可用状态成功'''
@@ -49,11 +51,12 @@ class FunCode(unittest.TestCase):
         self.assertEqual(self.result["status"], status)
         self.assertEqual(self.result['message'], message)
 
-    def test_funCode_absent(self):
-        ''' funCode 不传，获取可用状态失败 '''
-        self.result = requests.post(url=self.u, headers=self.h).json()
-        self.assertEqual(self.result['status'], 400)
-        self.assertEqual(self.result['message'], "")
+    # def test_funCode_absent(self):
+    #     ''' funCode 不传，获取可用状态失败 '''
+    #     self.result = requests.post(url=self.u, headers=self.h).json()
+    #     self.assertEqual(self.result['status'], 400)
+    #     self.assertEqual(self.result['message'], "")
+
 
 if __name__ == "__main__":
     unittest.main()

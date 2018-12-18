@@ -18,7 +18,7 @@ class AddressOne(unittest.TestCase):
         pass
 
     @parameterized.expand([
-        ("正确的地址ID，查询成功", 200, "请求成功", 16, '测试工作者', '13800138000', '测试办公室'),
+        ("正确的地址ID，查询成功", 200, "请求成功", 88, '测试工作者', '13800138000', '测试办公室'),
     ])
     def test_get_address_one_success(self, case, status, message, data_address_id, data_deliver_name,
                                      data_deliver_phone, data_deliver_address):
@@ -33,5 +33,5 @@ class AddressOne(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    # test_data.init_data()   # c初始化接口测试数据
+    test_data.init_data()   # c初始化接口测试数据
     unittest.main()

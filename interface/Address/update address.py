@@ -4,6 +4,7 @@ import requests
 from parameterized import parameterized
 from db_fixture import test_db
 from Global_base import global_base
+from db_fixture import test_data
 
 
 class UpdatedAddress(unittest.TestCase):
@@ -34,5 +35,5 @@ class UpdatedAddress(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    # test_data.init_data()  # 初始化接口测试数据
+    test_data.init_data()  # 初始化接口测试数据
     unittest.main()

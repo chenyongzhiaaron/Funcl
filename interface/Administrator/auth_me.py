@@ -8,7 +8,7 @@ from Global_base import global_base
 class AuthMe(unittest.TestCase):
     def setUp(self):
         self.u = global_base.DefTool.url(self, 'api/auth/me')
-        self.h = global_base.Utils.token(self)
+        self.h = global_base.DefTool.defaultHeaders(self)
 
     def tearDown(self):
         print(self.result)
@@ -19,7 +19,7 @@ class AuthMe(unittest.TestCase):
         self.assertEqual(self.result['status'], 200)
         self.assertEqual(self.result['message'], "请求成功")
         self.assertEqual(self.result['data']['brand'], 1000)
-        self.assertEqual(self.result['data']['mobile'], "17727498114")
+        self.assertEqual(self.result['data']['mobile'], "17727475174")
 
 
 if __name__ == "__main__":
