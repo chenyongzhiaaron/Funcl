@@ -10,6 +10,7 @@ from db_fixture import test_db
 
 class AddressOne(unittest.TestCase):
     def setUp(self):
+        test_data.init_data()  # c初始化接口测试数据
         id = test_db.T_DB().t_db2()
         self.url = global_base.DefTool.url(self, "api/user/address/" + str(id))
         self.headers = global_base.DefTool.defaultHeaders(self)
@@ -33,5 +34,4 @@ class AddressOne(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    test_data.init_data()   # c初始化接口测试数据
     unittest.main()

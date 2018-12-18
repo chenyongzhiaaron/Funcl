@@ -1,6 +1,9 @@
 import unittest
 
 import requests
+import os, sys
+parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, parentdir)
 
 from Global_base import global_base
 from db_fixture import test_data
@@ -29,4 +32,5 @@ class DefaultAddress(unittest.TestCase):
 
 if __name__ == "__main__":
     test_data.init_data()  # 初始化接口测试数据
+
     unittest.main()

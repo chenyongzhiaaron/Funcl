@@ -40,8 +40,9 @@ class DB:
         # real_sql = "delete from " + table_name + ";"    # 这是清光表数据
         real_sql = "delete from " + table_name + " where user_id = 352 and id >88;"    # 这是清空特定行数据
         with self.connection.cursor() as cursor:
-            cursor.execute("SET FOREIGN_KEY_CHECKS=0;")
+            cursor.execute("SET FOREIGN_KEY_CHECKS=0;")  # 删除外键约束
             cursor.execute(real_sql)
+            cursor.execute("SET FOREIGN_KEY_CHECKS=1")  # 启动外键约束
         self.connection.commit()
 
     # insert sql statement

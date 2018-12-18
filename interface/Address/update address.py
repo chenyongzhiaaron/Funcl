@@ -1,5 +1,7 @@
 import unittest
-
+import os, sys
+parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, parentdir)
 import requests
 from parameterized import parameterized
 from db_fixture import test_db
@@ -9,6 +11,7 @@ from db_fixture import test_data
 
 class UpdatedAddress(unittest.TestCase):
     def setUp(self):
+        test_data.init_data()  # 初始化接口测试数据
         address_id = test_db.T_DB.t_db2(self)
         print("api/user/address/" + str(address_id))
         self.url = global_base.DefTool.url(self, "api/user/address/" + str(address_id))
@@ -35,5 +38,4 @@ class UpdatedAddress(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    test_data.init_data()  # 初始化接口测试数据
     unittest.main()
