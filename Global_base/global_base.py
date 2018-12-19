@@ -48,13 +48,12 @@ class DefTool():
     def defaultHeaders(self):
         headers = {
             'Accept': 'application/json',
-            "Authorization": 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.'
-                             'eyJpc3MiOiJodHRwOi8vYXBpLmZ1bmNsLmNvbS9hcGkvYX'
-                             'V0aC9sb2dpbiIsImlhdCI6MTU0NTEyMjAwMCwiZXhwIjoxNTQ1M'
-                             'jA4NDAwLCJuYmYiOjE1NDUxMjIwMDAsImp0aSI6Im5X'
-                             'VlhOZTdDNG5HMkYwOFQiLCJzdWIiOjM1MiwicHJ2IjoiODdlMGF'
-                             'mMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1N'
-                             'DZhYSJ9.svNzFMOihZfPcGCTVSmkcJDxK0ALf41MTvXYaIYQScU',
+            "Authorization": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLmZ1bmN"
+                             "sLmNvbS9hcGkvYXV0aC9sb2dpbiIsImlhdCI6MTU0NTIwODg0MywiZXhwIjoxNTQ1Mjk1MjQzLC"
+                             "JuYmYiOjE1NDUyMDg4N"
+                             "DMsImp0aSI6IjdUM3ZWVFlNZXRMdHdqQ3oiLCJzdWIiOjM1MiwicHJ2IjoiODdlM"
+                             "GFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.4SQB0TozWc"
+                             "9nwe0CWY50GfhjM7XUBPI23fsZMf42Op0",
             "Access-Token": '17727475174',
             'Accept-Language': "cn",
             # "Content encoding": 'UTF-8'

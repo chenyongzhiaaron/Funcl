@@ -16,25 +16,25 @@ class NewAddress(unittest.TestCase):
         print(self.result)
 
     @parameterized.expand([
-        ("传入正确必填项，新建默认地址成功", "测试收货人名称", 17727475174, 11, 1101, 110105, "测试地址名称", 1, 200, '请求成功'),
-        ("传入正确必填项，新建非默认地址成功", "测试收货人名称", 17727475174, 11, 1101, 110105, "测试地址名称", 0, 200, '请求成功'),
+        ("传入正确必填项，新建默认地址成功", "测试收货人名称", 17727475174, 11, 1101, 110105, "测试地址名称", 518110, 1, 200, '请求成功'),
+        ("传入正确必填项，新建非默认地址成功", "测试收货人名称", 17727475174, 11, 1101, 110105, "测试地址名称", 518110, 0, 200, '请求成功'),
     ])
     def test_new_address_success(self, case, deliver_name, deliver_phone, deliver_address_province_id,
-                                 deliver_address_city_id, deliver_address_district_id, deliver_address,
+                                 deliver_address_city_id, deliver_address_district_id, deliver_address, zip_code,
                                  is_default,
                                  status, message):
         payload = {"deliver_name": deliver_name, "deliver_phone": deliver_phone,
                    "deliver_address_province_id": deliver_address_province_id,
                    "deliver_address_city_id": deliver_address_city_id,
                    "deliver_address_district_id": deliver_address_district_id, "deliver_address": deliver_address,
-                   "is_default": is_default}
+                   "is_default": is_default, "zip_code": zip_code}
         self.result = requests.post(url=self.url, headers=self.headers, data=payload).json()
         self.assertEqual(self.result["status"], status)
         self.assertEqual(self.result["message"], message)
 
 
 if __name__ == "__main__":
-    test_data.init_data()   # c初始化接口测试数据
+    test_data.init_data()
     unittest.main()
 
 '''

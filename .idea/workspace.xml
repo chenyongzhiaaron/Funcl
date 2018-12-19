@@ -2,11 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c6f9c80-bfa5-40cc-9e84-39cc42d46577" name="Default" comment="update all">
+      <change afterPath="$PROJECT_DIR$/interface/Address/delete_address_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/Address/update_default_address_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_fixture/mysql_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_fixture/mysql_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/address one.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Address/address one.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/default address.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Address/default address.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/update address.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Address/update address.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Global_base/global_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/Global_base/global_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/db_config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_fixture/test_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_fixture/test_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_fixture/test_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_fixture/test_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Address/address list.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Address/address_list_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Address/address one.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Address/address_one_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Address/default address.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Address/default_address_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Address/new address.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Address/new_address_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Address/update address.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Address/update_address_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Address/update default address.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Administrator/auth_captcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Administrator/auth_captcha_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Administrator/auth_logout.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Administrator/auth_logout_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Administrator/auth_me.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Administrator/auth_me_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Administrator/user_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Administrator/user_login_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/AppSerials/getAllSerials.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/AppSerials/get_all_serials_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/AppSerials/getOne.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/AppSerials/get_one_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/AppSerials/serialsStore.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/AppSerials/serials_store_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/FunCode/funCode.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/FunCode/fun_code_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/FunCode/funCodeProductInfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/FunCode/fun_code_product_info_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Newsletter/subscribe.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Newsletter/subscribe_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/create_order.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/OrderManagement/create_order_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_checkout.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/OrderManagement/order_checkout_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_getList.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/OrderManagement/order_get_list_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_getNumber.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/OrderManagement/order_get_number_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_pay.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/OrderManagement/order_pay_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_refund.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/OrderManagement/order_refund_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_show.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/OrderManagement/order_show_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/ProductsManagement/productInfo.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/ProductsManagement/product_info_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Public_address/city.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Public_address/city_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Public_address/district.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Public_address/district_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Public_address/province.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Public_address/province_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2018-09-11 17_28_00_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2018-09-11 18_25_47_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/2018-11-29 19_16_36_result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_tests.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,12 +72,14 @@
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_auth_me.coverage" NAME="Unittests in auth_me Coverage Results" MODIFIED="1542348136522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Administrator" />
     <SUITE FILE_PATH="coverage/Funcl$t.coverage" NAME="t Coverage Results" MODIFIED="1538193031272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Global_base" />
     <SUITE FILE_PATH="coverage/Funcl$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1543405314668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_fixture" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_delete_address_test_py.coverage" NAME="Unittests in delete_address_test.py Coverage Results" MODIFIED="1545209590967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$test_urlHeaders.coverage" NAME="test_urlHeaders Coverage Results" MODIFIED="1538192068428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Global_base" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_user_login.coverage" NAME="Unittests in user_login Coverage Results" MODIFIED="1542348044748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Administrator" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_tttttt.coverage" NAME="Unittests in tttttt Coverage Results" MODIFIED="1538193128405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Global_base" />
-    <SUITE FILE_PATH="coverage/Funcl$test_db.coverage" NAME="test_db Coverage Results" MODIFIED="1545125223795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_fixture" />
+    <SUITE FILE_PATH="coverage/Funcl$test_db.coverage" NAME="test_db Coverage Results" MODIFIED="1545192487044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_fixture" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_city_py.coverage" NAME="Unittests in city.py Coverage Results" MODIFIED="1543574893121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Public_address" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_TokenClass.coverage" NAME="Unittests in TokenClass Coverage Results" MODIFIED="1538191495338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Global_base" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_default_address_test_py.coverage" NAME="Unittests in default_address_test.py Coverage Results" MODIFIED="1545208915419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_create_order.coverage" NAME="Unittests in create_order Coverage Results" MODIFIED="1542711845486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OrderManagement" />
     <SUITE FILE_PATH="coverage/Funcl$address_list.coverage" NAME="address list Coverage Results" MODIFIED="1543456028138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$Unittest_User_login_test_login_success.coverage" NAME="Unittest User_login.test_login_success Coverage Results" MODIFIED="1536905781694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Administrator" />
@@ -52,14 +87,15 @@
     <SUITE FILE_PATH="coverage/Funcl$1234test.coverage" NAME="1234test Coverage Results" MODIFIED="1545100872827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/OrderManagement" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_auth_me_py.coverage" NAME="Unittests in auth_me.py Coverage Results" MODIFIED="1545102414499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Administrator" />
     <SUITE FILE_PATH="coverage/untitled$get_captcha.coverage" NAME="get_captcha Coverage Results" MODIFIED="1536657009525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Administrator" />
-    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_address_one_py.coverage" NAME="Unittests in address one.py Coverage Results" MODIFIED="1545125600430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_address_one_py.coverage" NAME="Unittests in address one.py Coverage Results" MODIFIED="1545198247626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$execute_db.coverage" NAME="execute_db Coverage Results" MODIFIED="1536724537091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_fixture" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_auth_info_py.coverage" NAME="Unittests in auth_info.py Coverage Results" MODIFIED="1545034369886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Administrator" />
     <SUITE FILE_PATH="coverage/Funcl$Unittest_Subscribe_test_subscribe_fail.coverage" NAME="Unittest Subscribe.test_subscribe_fail Coverage Results" MODIFIED="1540960958077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newsletter" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_global_base.coverage" NAME="Unittests in global_base Coverage Results" MODIFIED="1538279293770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Global_base" />
-    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_update_address_py.coverage" NAME="Unittests in update address.py Coverage Results" MODIFIED="1545130051256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_update_address_py.coverage" NAME="Unittests in update address.py Coverage Results" MODIFIED="1545191667582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_funCode_py.coverage" NAME="Unittests in funCode.py Coverage Results" MODIFIED="1545112639303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/FunCode" />
-    <SUITE FILE_PATH="coverage/Funcl$test_data.coverage" NAME="test_data Coverage Results" MODIFIED="1545129627600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_fixture" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_delete_address_py.coverage" NAME="Unittests in delete address.py Coverage Results" MODIFIED="1545200126488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
+    <SUITE FILE_PATH="coverage/Funcl$test_data.coverage" NAME="test_data Coverage Results" MODIFIED="1545212068632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_fixture" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_auth_logout.coverage" NAME="Unittests in auth_logout Coverage Results" MODIFIED="1542346619837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Administrator" />
     <SUITE FILE_PATH="coverage/Funcl$productInfo.coverage" NAME="productInfo Coverage Results" MODIFIED="1543400290168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/ProductsManagement" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_productInfo.coverage" NAME="Unittests in productInfo Coverage Results" MODIFIED="1540894103135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ProductsManagement" />
@@ -70,23 +106,28 @@
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_new_address.coverage" NAME="Unittests in new address Coverage Results" MODIFIED="1543484179737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_getNumber.coverage" NAME="Unittests in getNumber Coverage Results" MODIFIED="1541387184313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/OrderManagement" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_order_getNumber_py.coverage" NAME="Unittests in order_getNumber.py Coverage Results" MODIFIED="1545119443289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/OrderManagement" />
-    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_default_address_py.coverage" NAME="Unittests in default address.py Coverage Results" MODIFIED="1545129013397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_default_address_py.coverage" NAME="Unittests in default address.py Coverage Results" MODIFIED="1545188540421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$run_tests__1_.coverage" NAME="run_tests (1) Coverage Results" MODIFIED="1536661547223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Funcl$run_tests.coverage" NAME="run_tests Coverage Results" MODIFIED="1543490195184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_order_getList_py.coverage" NAME="Unittests in order_getList.py Coverage Results" MODIFIED="1545119181662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/OrderManagement" />
+    <SUITE FILE_PATH="coverage/Funcl$run_tests.coverage" NAME="run_tests Coverage Results" MODIFIED="1545206050134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_address_one_test_py.coverage" NAME="Unittests in address_one_test.py Coverage Results" MODIFIED="1545207998914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_address_list_test_py.coverage" NAME="Unittests in address_list_test.py Coverage Results" MODIFIED="1545207629520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$auth_refresh.coverage" NAME="auth_refresh Coverage Results" MODIFIED="1542348565173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Administrator" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_getOne.coverage" NAME="Unittests in getOne Coverage Results" MODIFIED="1542266115001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/AppSerials" />
     <SUITE FILE_PATH="coverage/Funcl$user_login.coverage" NAME="user_login Coverage Results" MODIFIED="1538215930296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Administrator" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_create_order_py.coverage" NAME="Unittests in create_order.py Coverage Results" MODIFIED="1545112965670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/OrderManagement" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_address_list.coverage" NAME="Unittests in address list Coverage Results" MODIFIED="1543483772252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_update_address.coverage" NAME="Unittests in update address Coverage Results" MODIFIED="1543489940498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_update_default_address_py.coverage" NAME="Unittests in update default address.py Coverage Results" MODIFIED="1545187222166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_user_login_py.coverage" NAME="Unittests in user_login.py Coverage Results" MODIFIED="1545031074759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Administrator" />
-    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_new_address_py.coverage" NAME="Unittests in new address.py Coverage Results" MODIFIED="1545126117405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_new_address_py.coverage" NAME="Unittests in new address.py Coverage Results" MODIFIED="1545202614280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_update_address_test_py.coverage" NAME="Unittests in update_address_test.py Coverage Results" MODIFIED="1545210191208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_subscribe.coverage" NAME="Unittests in subscribe Coverage Results" MODIFIED="1540964689684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newsletter" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_defUH.coverage" NAME="Unittests in defUH Coverage Results" MODIFIED="1538205487306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Global_base" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_auth_captcha_py.coverage" NAME="Unittests in auth_captcha.py Coverage Results" MODIFIED="1545034566190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Administrator" />
     <SUITE FILE_PATH="coverage/Funcl$global_base.coverage" NAME="global_base Coverage Results" MODIFIED="1543394750816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Global_base" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_t.coverage" NAME="Unittests in t Coverage Results" MODIFIED="1538193438730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Global_base" />
+    <SUITE FILE_PATH="coverage/Funcl$Unittests_in_create_order_test_py.coverage" NAME="Unittests in create_order_test.py Coverage Results" MODIFIED="1545216135981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/OrderManagement" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -94,78 +135,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/interface/Address/address one.py">
+        <entry file="file://$PROJECT_DIR$/interface/OrderManagement/create_order_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="77" lean-forward="true" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
+            <state relative-caret-position="399">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db_fixture/test_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db_fixture/mysql_db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
-              <folding>
-                <element signature="e#14#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface/Address/update address.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#567#682#0" />
-                <element signature="e#923#1295#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface/Address/update default address.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface/Address/new address.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface/Address/address list.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -190,16 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/AppSerials/serialsStore.py" />
-        <option value="$PROJECT_DIR$/AppSerials/getOne.py" />
-        <option value="$PROJECT_DIR$/FunCode/funCode.py" />
-        <option value="$PROJECT_DIR$/FunCode/funCodeProductInfo.py" />
-        <option value="$PROJECT_DIR$/Administrator/auth_captcha.py" />
-        <option value="$PROJECT_DIR$/Administrator/auth_info.py" />
-        <option value="$PROJECT_DIR$/Administrator/auth_logout.py" />
-        <option value="$PROJECT_DIR$/Administrator/auth_me.py" />
-        <option value="$PROJECT_DIR$/Administrator/user_login.py" />
-        <option value="$PROJECT_DIR$/Administrator/auth_refresh.py" />
         <option value="$PROJECT_DIR$/OrderManagement/order_getNumber.py" />
         <option value="$PROJECT_DIR$/OrderManagement/order_getList.py" />
         <option value="$PROJECT_DIR$/OrderManagement/create_order.py" />
@@ -209,14 +175,11 @@
         <option value="$PROJECT_DIR$/global_base.py" />
         <option value="$PROJECT_DIR$/auth_captcha.py" />
         <option value="$PROJECT_DIR$/user_login.py" />
-        <option value="$PROJECT_DIR$/db_config.ini" />
         <option value="D:/2345下载/WeChat Files/blue-blue-lemon/Files/productInfo_test.py" />
         <option value="$PROJECT_DIR$/db_fixture/__init__.py" />
         <option value="$PROJECT_DIR$/interface/Address/updata address.py" />
         <option value="$PROJECT_DIR$/interface/Address/address list.py" />
         <option value="$PROJECT_DIR$/interface/AppSerials/getAllSerials.py" />
-        <option value="$PROJECT_DIR$/interface/Address/update default address.py" />
-        <option value="$PROJECT_DIR$/run_tests.py" />
         <option value="$PROJECT_DIR$/interface/ProductsManagement/productInfo.py" />
         <option value="$PROJECT_DIR$/interface/Public_address/city.py" />
         <option value="$PROJECT_DIR$/interface/Administrator/auth_info.py" />
@@ -227,28 +190,41 @@
         <option value="$PROJECT_DIR$/interface/FunCode/funCode.py" />
         <option value="$PROJECT_DIR$/interface/OrderManagement/create_order.py" />
         <option value="$PROJECT_DIR$/interface/OrderManagement/order_canBuy.py" />
-        <option value="$PROJECT_DIR$/interface/Address/new address.py" />
         <option value="$PROJECT_DIR$/interface/OrderManagement/order_checkout.py" />
         <option value="$PROJECT_DIR$/interface/OrderManagement/order_getList.py" />
         <option value="$PROJECT_DIR$/interface/OrderManagement/order_pay.py" />
         <option value="$PROJECT_DIR$/interface/OrderManagement/order_refund.py" />
         <option value="$PROJECT_DIR$/interface/OrderManagement/order_getNumber.py" />
-        <option value="$PROJECT_DIR$/Global_base/global_base.py" />
-        <option value="$PROJECT_DIR$/db_fixture/test_db.py" />
         <option value="$PROJECT_DIR$/Global_base/__init__.py" />
         <option value="$PROJECT_DIR$/db_fixture/mysql_db.py" />
+        <option value="$PROJECT_DIR$/interface/Address/update default address.py" />
         <option value="$PROJECT_DIR$/interface/Address/default address.py" />
         <option value="$PROJECT_DIR$/interface/Address/update address.py" />
-        <option value="$PROJECT_DIR$/db_fixture/test_data.py" />
+        <option value="$PROJECT_DIR$/db_config.ini" />
         <option value="$PROJECT_DIR$/interface/Address/address one.py" />
+        <option value="$PROJECT_DIR$/interface/Administrator/auth_logout.py" />
+        <option value="$PROJECT_DIR$/db_fixture/test_db.py" />
+        <option value="$PROJECT_DIR$/interface/Address/delete address.py" />
+        <option value="$PROJECT_DIR$/interface/Address/new address.py" />
+        <option value="$PROJECT_DIR$/run_tests.py" />
+        <option value="$PROJECT_DIR$/interface/Address/address_list_test.py" />
+        <option value="$PROJECT_DIR$/interface/Address/address_one_test.py" />
+        <option value="$PROJECT_DIR$/Global_base/global_base.py" />
+        <option value="$PROJECT_DIR$/interface/Address/default_address_test.py" />
+        <option value="$PROJECT_DIR$/interface/Address/delete_address_test.py" />
+        <option value="$PROJECT_DIR$/interface/Address/update_default_address_test.py" />
+        <option value="$PROJECT_DIR$/interface/Address/update_address_test.py" />
+        <option value="$PROJECT_DIR$/interface/OrderManagement/order_checkout_test.py" />
+        <option value="$PROJECT_DIR$/db_fixture/test_data.py" />
+        <option value="$PROJECT_DIR$/interface/OrderManagement/create_order_test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1776" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -267,7 +243,13 @@
             <path>
               <item name="Funcl" type="b2602c69:ProjectViewProjectNode" />
               <item name="Funcl" type="462c0819:PsiDirectoryNode" />
-              <item name="db_fixture" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Funcl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Funcl" type="462c0819:PsiDirectoryNode" />
+              <item name="interface" type="462c0819:PsiDirectoryNode" />
+              <item name="OrderManagement" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -313,7 +295,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in update address.py">
+  <component name="RunManager" selected="Python tests.Unittests in create_order_test.py">
     <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -445,22 +427,22 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in address one.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in create_order_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Funcl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface/Address" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/interface/OrderManagement" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface/Address/address one.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface/OrderManagement/create_order_test.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in default address.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in default_address_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Funcl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -471,11 +453,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface/Address/default address.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface/Address/default_address_test.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in new address.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in delete_address_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Funcl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -486,11 +468,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface/Address/new address.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface/Address/delete_address_test.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in update address.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in update_address_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Funcl" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -501,7 +483,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface/Address/update address.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/interface/Address/update_address_test.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -572,19 +554,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests in default address.py" />
+      <item itemvalue="Python tests.Unittests in default_address_test.py" />
+      <item itemvalue="Python tests.Unittests in delete_address_test.py" />
+      <item itemvalue="Python tests.Unittests in update_address_test.py" />
       <item itemvalue="Python.test_data" />
-      <item itemvalue="Python tests.Unittests in address one.py" />
-      <item itemvalue="Python tests.Unittests in update address.py" />
-      <item itemvalue="Python tests.Unittests in new address.py" />
+      <item itemvalue="Python tests.Unittests in create_order_test.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in update address.py" />
+        <item itemvalue="Python tests.Unittests in create_order_test.py" />
         <item itemvalue="Python.test_data" />
-        <item itemvalue="Python tests.Unittests in default address.py" />
-        <item itemvalue="Python tests.Unittests in new address.py" />
-        <item itemvalue="Python tests.Unittests in address one.py" />
+        <item itemvalue="Python tests.Unittests in update_address_test.py" />
+        <item itemvalue="Python tests.Unittests in delete_address_test.py" />
+        <item itemvalue="Python tests.Unittests in default_address_test.py" />
       </list>
     </recent_temporary>
   </component>
@@ -599,7 +581,7 @@
       <option name="presentableId" value="Default" />
       <updated>1536655377193</updated>
       <workItem from="1543545385914" duration="4800000" />
-      <workItem from="1545030153509" duration="31684000" />
+      <workItem from="1545030153509" duration="57375000" />
     </task>
     <task id="LOCAL-00001" summary="first commmit">
       <created>1538289967373</created>
@@ -650,43 +632,50 @@
       <option name="project" value="LOCAL" />
       <updated>1545126213664</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update all">
+      <created>1545131517925</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545131517926</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_update_address_py - 2018.12.18 at 18h 18m 06s.xml">
-      <configuration name="Unittests in update address.py" configurationId="tests" />
+    <history-entry file="Unittests_in_default_address_test_py - 2018.12.19 at 16h 30m 46s.xml">
+      <configuration name="Unittests in default_address_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_default_address_py - 2018.12.18 at 18h 23m 01s.xml">
-      <configuration name="Unittests in default address.py" configurationId="tests" />
+    <history-entry file="Unittests_in_default_address_test_py - 2018.12.19 at 16h 38m 38s.xml">
+      <configuration name="Unittests in default_address_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_default_address_py - 2018.12.18 at 18h 30m 21s.xml">
-      <configuration name="Unittests in default address.py" configurationId="tests" />
+    <history-entry file="Unittests_in_default_address_test_py - 2018.12.19 at 16h 41m 57s.xml">
+      <configuration name="Unittests in default_address_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_update_address_py - 2018.12.18 at 18h 35m 35s.xml">
-      <configuration name="Unittests in update address.py" configurationId="tests" />
+    <history-entry file="Unittests_in_delete_address_test_py - 2018.12.19 at 16h 50m 53s.xml">
+      <configuration name="Unittests in delete_address_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_update_address_py - 2018.12.18 at 18h 38m 59s.xml">
-      <configuration name="Unittests in update address.py" configurationId="tests" />
+    <history-entry file="Unittests_in_delete_address_test_py - 2018.12.19 at 16h 51m 29s.xml">
+      <configuration name="Unittests in delete_address_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_update_address_py - 2018.12.18 at 18h 42m 01s.xml">
-      <configuration name="Unittests in update address.py" configurationId="tests" />
+    <history-entry file="Unittests_in_delete_address_test_py - 2018.12.19 at 16h 52m 20s.xml">
+      <configuration name="Unittests in delete_address_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_update_address_py - 2018.12.18 at 18h 43m 39s.xml">
-      <configuration name="Unittests in update address.py" configurationId="tests" />
+    <history-entry file="Unittests_in_delete_address_test_py - 2018.12.19 at 16h 53m 14s.xml">
+      <configuration name="Unittests in delete_address_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_update_address_py - 2018.12.18 at 18h 44m 56s.xml">
-      <configuration name="Unittests in update address.py" configurationId="tests" />
+    <history-entry file="Unittests_in_update_address_test_py - 2018.12.19 at 17h 02m 24s.xml">
+      <configuration name="Unittests in update_address_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_update_address_py - 2018.12.18 at 18h 47m 08s.xml">
-      <configuration name="Unittests in update address.py" configurationId="tests" />
+    <history-entry file="Unittests_in_update_address_test_py - 2018.12.19 at 17h 03m 13s.xml">
+      <configuration name="Unittests in update_address_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_update_address_py - 2018.12.18 at 18h 47m 33s.xml">
-      <configuration name="Unittests in update address.py" configurationId="tests" />
+    <history-entry file="Unittests_in_create_order_test_py - 2018.12.19 at 18h 42m 24s.xml">
+      <configuration name="Unittests in create_order_test.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36484000" />
+    <option name="totallyTimeSpent" value="62175000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -699,20 +688,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18991417" />
-      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18723176" />
+      <window_info id="Structure" order="1" weight="0.2494382" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32934782" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.6970033" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3962264" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34628192" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39548022" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50316167" side_tool="true" weight="0.32880434" />
-      <window_info anchor="bottom" id="Python Console" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32852387" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.3299435" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32768363" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4968383" weight="0.32768363" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -756,40 +746,7 @@
     <MESSAGE value="update all" />
     <option name="LAST_COMMIT_MESSAGE" value="update all" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/interface/Address/update default address.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user_login.py" />
-    <entry file="file://$PROJECT_DIR$/interface/ProductsManagement/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://D:/2345下载/WeChat Files/blue-blue-lemon/Files/productInfo_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_fixture/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTMLTestRunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3078" />
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Python36/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
@@ -797,68 +754,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Address/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/interface/Administrator/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/interface/FunCode/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/FunCode/funCodeProductInfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/AppSerials/serialsStore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/AppSerials/getOne.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/AppSerials/getAllSerials.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Newsletter/subscribe.py">
+    <entry file="file://$PROJECT_DIR$/interface/Newsletter/subscribe_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-779">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/unittest/__init__.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="151" column="8" selection-start-line="151" selection-start-column="8" selection-end-line="151" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_show.py">
+    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_show_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Administrator/user_login.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="38" column="40" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -869,47 +781,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Administrator/auth_logout.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Administrator/auth_captcha.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/ProductsManagement/productInfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="27" column="67" lean-forward="true" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/interface/Public_address/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Public_address/city.py">
+    <entry file="file://$PROJECT_DIR$/interface/Public_address/city_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
@@ -919,33 +797,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Public_address/province.py">
+    <entry file="file://$PROJECT_DIR$/interface/Public_address/province_test.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Public_address/district.py">
+    <entry file="file://$PROJECT_DIR$/interface/Public_address/district_test.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Administrator/auth_me.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interface/OrderManagement/1234test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/FunCode/funCode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="80" selection-start-line="21" selection-start-column="80" selection-end-line="21" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,34 +817,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/create_order.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="38" column="96" lean-forward="true" selection-start-line="38" selection-start-column="96" selection-end-line="38" selection-end-column="96" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_checkout.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_getList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="53" column="26" lean-forward="true" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_getNumber.py">
+    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_get_number_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
@@ -993,14 +827,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_pay.py">
+    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_pay_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_refund.py">
+    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_refund_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
@@ -1017,30 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db_config.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_fixture/test_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="69" column="36" lean-forward="true" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Global_base/global_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="50" column="75" lean-forward="true" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Global_base/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1054,74 +864,261 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Address/default address.py">
+    <entry file="file://$PROJECT_DIR$/HTMLTestRunner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#191#903#0" />
-          </folding>
+        <state relative-caret-position="-456" />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/unittest/__init__.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="248" column="43" selection-start-line="248" selection-start-column="43" selection-end-line="248" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Address/new address.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Address/address list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Address/update default address.py">
+    <entry file="file://$PROJECT_DIR$/db_config.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Address/update address.py">
+    <entry file="file://$PROJECT_DIR$/interface/Address/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="456">
+          <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#567#682#0" />
-            <element signature="e#923#1295#0" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/teamcity/diff_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Global_base/global_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="58" column="41" lean-forward="true" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Address/address_list_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="20" column="28" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Address/address_one_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Address/default_address_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Address/delete_address_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Address/new_address_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="32" column="57" lean-forward="true" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Address/update_address_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="46" column="73" selection-start-line="46" selection-start-column="73" selection-end-line="46" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Address/update_default_address_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Administrator/auth_captcha_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Administrator/auth_logout_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Administrator/auth_me_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Administrator/user_login_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/AppSerials/get_one_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/AppSerials/serials_store_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/AppSerials/get_all_serials_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/FunCode/fun_code_product_info_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/FunCode/fun_code_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="80" selection-start-line="21" selection-start-column="80" selection-end-line="21" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/ProductsManagement/product_info_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="27" column="67" lean-forward="true" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_checkout_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="40" column="48" lean-forward="true" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_fixture/test_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_fixture/test_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/2345下载/WeChat Files/blue-blue-lemon/Files/UtilsDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-855" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db_fixture/mysql_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+        <state relative-caret-position="455">
+          <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
           <folding>
             <element signature="e#14#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db_fixture/test_data.py">
+    <entry file="file://D:/2345下载/WeChat Files/blue-blue-lemon/Files/TestBaiduSearchWithParameterDB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="494">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Address/address one.py">
+    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/order_get_list_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="77" lean-forward="true" selection-start-line="25" selection-start-column="77" selection-end-line="25" selection-end-column="77" />
+        <state relative-caret-position="380">
+          <caret line="24" column="72" lean-forward="true" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/OrderManagement/create_order_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

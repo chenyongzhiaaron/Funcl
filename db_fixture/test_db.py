@@ -1,5 +1,21 @@
 import pymysql.cursors
+import os
+import configparser as cparser
+import pymysql.cursors
 
+# ======== Reading db_config.ini setting ===========
+base_dir = str(os.path.dirname(os.path.dirname(__file__)))
+base_dir = base_dir.replace('\\', '/')
+file_path = base_dir + "/db_config.ini"
+
+cf = cparser.ConfigParser()
+
+cf.read(file_path)
+host = cf.get("mysqlconf", "host")
+port = cf.get("mysqlconf", "port")
+db = cf.get("mysqlconf", "db_name")
+user = cf.get("mysqlconf", "user")
+password = cf.get("mysqlconf", "password")
 
 # -*- coding: UTF-8 -*-
 
@@ -7,11 +23,11 @@ class T_DB():
     #   通过数据库获取用户最新的一条验证码
     def t_db(self):
         # 连接MySQL数据库
-        connection = pymysql.connect(host='192.168.1.45',
-                                     port=3306,
-                                     user='remote',
-                                     password='123456',
-                                     db='crazybaby',
+        connection = pymysql.connect(host=host,
+                                     port=int(port),
+                                     user=user,
+                                     password=password,
+                                     db=db,
                                      charset='utf8mb4',
                                      cursorclass=pymysql.cursors.DictCursor)  # 田科本地测试数据库
 
@@ -52,11 +68,11 @@ class T_DB():
     #   通过数据库获取用户最新的一条地址
     def t_db2(self):
         # 连接MySQL数据库
-        connection = pymysql.connect(host='192.168.1.45',
-                                     port=3306,
-                                     user='remote',
-                                     password='123456',
-                                     db='crazybaby',
+        connection = pymysql.connect(host=host,
+                                     port=int(port),
+                                     user=user,
+                                     password=password,
+                                     db=db,
                                      charset='utf8mb4',
                                      cursorclass=pymysql.cursors.DictCursor)  # 田科本地测试数据库
         # 通过cursor创建游标
@@ -74,6 +90,6 @@ class T_DB():
         return address_id
 
 # test = T_DB()
-# # print(test.t_db())
+# print(test.t_db())
 # address_id = test.t_db2()
 # print("api/user/address/" + str(address_id))

@@ -32,6 +32,7 @@ class OrderCheckout(unittest.TestCase):
     ])
     def test_order_checkout_success(self, case, product_id, product_count, pay_type, address_id, fun_code, status,
                                     message, data):
+        '''选择正确支付方式及产品，生成订单 并跳转支付成功'''
         payload = {"product_id": product_id, "product_count": product_count, "pay_type": pay_type,
                    "address_id": address_id, "fun_code": fun_code}
         self.result = requests.post(url=self.url, headers=self.headers, data=payload).json()
