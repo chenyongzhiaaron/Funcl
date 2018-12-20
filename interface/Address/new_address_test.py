@@ -23,6 +23,7 @@ class NewAddress(unittest.TestCase):
                                  deliver_address_city_id, deliver_address_district_id, deliver_address, zip_code,
                                  is_default,
                                  status, message):
+        '''新建默认地址及非默认地址成功'''
         payload = {"deliver_name": deliver_name, "deliver_phone": deliver_phone,
                    "deliver_address_province_id": deliver_address_province_id,
                    "deliver_address_city_id": deliver_address_city_id,
@@ -34,7 +35,7 @@ class NewAddress(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    test_data.init_data()
+    # test_data.init_data()
     unittest.main()
 
 '''

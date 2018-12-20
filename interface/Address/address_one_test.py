@@ -30,5 +30,5 @@ class AddressOne(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    test_data.init_data()  # c初始化接口测试数据
+    # test_data.init_data()  # c初始化接口测试数据
     unittest.main()

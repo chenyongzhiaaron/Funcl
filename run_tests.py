@@ -14,7 +14,7 @@ test_dir = './interface/Address'
 discover = unittest.defaultTestLoader.discover(test_dir, pattern='*.py')
 
 if __name__ == "__main__":
-    # test_data.init_data()  # 初始化接口测试数据
+    test_data.init_data()  # 初始化接口测试数据
     now = time.strftime("%Y-%m-%d %H_%M_%S")
     filename = './report/' + now + '_result.html'
     fp = open(filename, 'wb')

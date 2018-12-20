@@ -26,14 +26,14 @@ class UpdateDefaultAddress(unittest.TestCase):
         '''获取用户默认地址查看是否修改默认地址成功'''
         url = global_base.DefTool.url(self, "api/user/default_address")
         self.result2 = requests.get(url=url, headers=self.headers).json()
-        self.assertEqual(self.result['status'], 200)
-        self.assertEqual(self.result['message'], "请求成功")
-        self.assertEqual(self.result['data']['address_id'], aid)
-        self.assertEqual(self.result['data']['is_default'], 1)
+        self.assertEqual(self.result2['status'], 200)
+        self.assertEqual(self.result2['message'], "请求成功")
+        self.assertEqual(self.result2['data']['address_id'], aid)
+        self.assertEqual(self.result2['data']['is_default'], 1)
 
 
 if __name__ == '__main__':
-    test_data.init_data()
+    # test_data.init_data()
     unittest.main()
 
 

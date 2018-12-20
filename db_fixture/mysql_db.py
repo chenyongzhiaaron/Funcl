@@ -34,11 +34,21 @@ class DB:
         except pymysql.err.OperationalError as e:
             print("Mysql Error %d: %s" % (e.args[0], e.args[1]))
 
-    # clear table data
-    def clear(self, table_name):
+    # clear user_address table data
+    def clear_address(self, table_name):
         # real_sql = "truncate table " + table_name + ";"
         # real_sql = "delete from " + table_name + ";"    # 这是清光表数据
         real_sql = "delete from " + table_name + " where user_id = 352 and id >88;"    # 这是清空特定行数据
+        with self.connection.cursor() as cursor:
+            cursor.execute("SET FOREIGN_KEY_CHECKS=0;")  # 删除外键约束
+            cursor.execute(real_sql)
+            cursor.execute("SET FOREIGN_KEY_CHECKS=1")  # 启动外键约束
+        self.connection.commit()
+
+    # clear funcl_fun_code table data
+    def clear_fun_code(self, table_name):
+        # real_sql = "truncate table " + table_name + ";"
+        real_sql = "delete from " + table_name + ";"    # 这是清光表数据
         with self.connection.cursor() as cursor:
             cursor.execute("SET FOREIGN_KEY_CHECKS=0;")  # 删除外键约束
             cursor.execute(real_sql)
@@ -63,14 +73,21 @@ class DB:
     def close(self):
         self.connection.close()
 
-    # init data
-    def init_data(self, datas):
+    # init user_address data
+    def init_data_address(self, datas):
         for table, data in datas.items():
-            self.clear(table)
+            self.clear_address(table)
             for d in data:
                 self.insert(table, d)
         self.close()
 
+    # init fun_code data
+    def init_data_fun_code(self, datas):
+        for table, data in datas.items():
+            self.clear_fun_code(table)
+            for d in data:
+                self.insert(table, d)
+        self.close()
 
 
 

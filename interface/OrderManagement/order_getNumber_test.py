@@ -14,6 +14,7 @@ class GetNumber(unittest.TestCase):
         print(self.result)
 
     def test_get_number_success(self):
+        '''获取总订单数量成功'''
         self.result = requests.get(url=self.u, headers=self.h).json()
         self.assertEqual(self.result["status"], 200)
         self.assertEqual(self.result["message"], "请求成功")

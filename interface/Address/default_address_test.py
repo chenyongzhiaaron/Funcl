@@ -11,7 +11,7 @@ from db_fixture import test_data
 
 class DefaultAddress(unittest.TestCase):
     def setUp(self):
-        test_data.init_data()  # 初始化接口测试数据
+        # test_data.init_data()  # 初始化接口测试数据
 
         self.url = global_base.DefTool.url(self, 'api/user/default_address')
         self.headers = global_base.DefTool.defaultHeaders(self)

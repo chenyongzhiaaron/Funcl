@@ -26,7 +26,7 @@ class UpdatedAddress(unittest.TestCase):
         status = 200
         message = "请求成功"
         deliver_name = '修改用户'
-        deliver_phone = 13800138001
+        deliver_phone = '13800138001'
         deliver_address_province_id = 44
         deliver_address_district_id = 441900003
         deliver_address_city_id = 4419
@@ -55,5 +55,5 @@ class UpdatedAddress(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    test_data.init_data()  # 初始化接口测试数据
+    # test_data.init_data()  # 初始化接口测试数据
     unittest.main()

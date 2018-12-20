@@ -14,7 +14,7 @@ class UserLogin(unittest.TestCase):
 
     @parameterized.expand(
         [
-            ("手机号正确，验证码错误，登录失败", 17727498114, 1233, 422, "验证失败", 'The 手机号码 已变更.', 'The verify code 不正确.'),
+            ("手机号正确，验证码错误，登录失败", 18127813600, 1233, 422, "验证失败", 'The 手机号码 已变更.', 'The verify code 不正确.'),
             ("手机号错误，验证码正确，登录失败", 13800138009, 123456, 422, "验证失败", 'The 手机号码 已变更.', 'The verify code 不正确.'),
             ("手机号最大值+1，验证码正确，登录失败", 181278136001, 123456, 422, "验证失败", '手机号码 格式不对.', 'The verify code 不正确.'),
             ("手机号-1，验证码正确，登录失败", 1812781360, 123456, 422, "验证失败", '手机号码 格式不对.', 'The verify code 不正确.'),
@@ -24,6 +24,7 @@ class UserLogin(unittest.TestCase):
         ]
     )
     def test_user_login(self, case, mobile, verify_code, status, message, errors_mobile, errors_verify_code):
+        '''参数错误，登录失败'''
         payload = {"mobile": mobile, "verify_code": verify_code}
         self.result = requests.post(url=self.u, headers=self.h, data=payload).json()
         self.assertEqual(self.result["status"], status)
@@ -32,11 +33,12 @@ class UserLogin(unittest.TestCase):
         self.assertEqual(self.result['errors']['verify_code'][0], errors_verify_code)
 
     def test_login_success(self):
-        headers1 = {'Accept': 'application/json', "Access-Token": '17727498114'}
+        '''参数正确，登录成功'''
+        headers1 = {'Accept': 'application/json', "Access-Token": '18127813600'}
         url1 = global_base.DefTool.url(self, "api/auth/captcha?mobile=17727498114")
         self.r1 = requests.get(url=url1, headers=headers1).json()
         number = test_db.T_DB.t_db(self)
-        payload = {"mobile": 17727498114, "verify_code": number}
+        payload = {"mobile": 18127813600, "verify_code": number}
         self.result = requests.post(url=self.u, headers=self.h, data=payload).json()
         self.assertEqual(self.result["status"], 200)
         self.assertEqual(self.result["message"], "请求成功")

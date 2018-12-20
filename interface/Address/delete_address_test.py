@@ -37,5 +37,5 @@ class DeleteAddress(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    test_data.init_data()
+    # test_data.init_data()
     unittest.main()

@@ -20,6 +20,7 @@ class Get_captcha(unittest.TestCase):
         ]
     )
     def test_auth_captcha_success(self, case, status, message):
+        '''数据正确，获取成功'''
         payload = {'mobile': 17727498114}
         self.result = requests.get(self.url, headers=self.hearders, params=payload).json()
         self.assertEqual(self.result["status"], status)
@@ -32,6 +33,7 @@ class Get_captcha(unittest.TestCase):
         ('输入手机号为特殊字符，获取验证码失败', "189*(*9{:>as", 422, "验证失败", "手机号码 格式不对."),
     ])
     def test_auth_captcha_error(self, case, mobile, status, message, errors):
+        ''' 数据错误获取验证码失败'''
         payload = {"mobile": mobile}
         self.result = requests.get(url=self.url, headers=self.hearders, params=payload).json()
         self.assertEqual(self.result['status'], status)
