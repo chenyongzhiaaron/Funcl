@@ -36,32 +36,42 @@ datas_fun_code = {
         {'fun_code': "MQZE1G57P3X72D9W", 'product_id': 92, 'active_time': past_time,
          'expiration_time': future_time, 'is_used': 0, 'code_type': "新品fun码",
          "created_at": current_time, "updated_at": current_time},   # 已激活，未到期，未使用
-        {'fun_code': "WOINFO193841N009", 'product_id': 92, 'active_time': past_time,
-         'expiration_time': future_time, 'is_used': 1, 'code_type': "新品fun码",
-         "created_at": current_time, "updated_at": current_time},   # 已激活，未到期，已使用
-        {'fun_code': "FWON9239J238J922", 'product_id': 92, 'active_time': past_time,
-         'expiration_time': past_time, 'is_used': 0, 'code_type': "新品fun码",
-         "created_at": past_time, "updated_at": past_time},         # 已激活，已到期，未使用
-        {'fun_code': "92389NJ2H19DE183", 'product_id': 92, 'active_time': past_time,
-         'expiration_time': past_time, 'is_used': 1, 'code_type': "新品fun码",
-         "created_at": past_time, "updated_at": past_time},         # 已激活，已到期，已使用
-        {'fun_code': "D12H872Y1010UJR0", 'product_id': 92, 'active_time': future_time,
-         'expiration_time': future_time, 'is_used': 0, 'code_type': "新品fun码",
-         "created_at": current_time, "updated_at": current_time},   # 未激活，未到期，未使用
-        {'fun_code': "1EJ91HJR891H8191", 'product_id': 92, 'active_time': future_time,
-         'expiration_time': future_time, 'is_used': 1, 'code_type': "新品fun码",
-         "created_at": current_time, "updated_at": current_time},   # 未激活，未到期，已使用
-
     ],
 }
 
 
 
-# Inster table datas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''# Inster table datas
 def init_data():
     DB().init_data_address(datas_address)
     DB().init_data_fun_code(datas_fun_code)
 
 
 if __name__ == '__main__':
-    init_data()
+    init_data()'''
+

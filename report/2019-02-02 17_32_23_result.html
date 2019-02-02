@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>QSJ API Test Report</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/Chart.js/0.2.0/Chart.min.js"></script>
+    <!-- <link href="https://cdn.bootcss.com/echarts/3.8.5/echarts.common.min.js" rel="stylesheet">   -->
+    
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         {  }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+	margin-left: 10px;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+    margin-left: 10px;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+    margin-left: 10px;
+}
+#header_row {
+    font-weight: bold;
+    color: #606060;
+    background-color: #f5f5f5;
+    border-top-width: 10px;
+    border-color: #d6e9c6;
+	font-size: 12px;
+}
+#result_table td {
+    border: 1px solid #f5f5f5;
+    padding: 2px;
+
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #d6e9c6; }
+.failClass  { background-color: #faebcc; }
+.errorClass { background-color: #ebccd1; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+/* -- chars ---------------------------------------------------------------------- */
+.testChars {margin-left: 150px;}
+
+.btn-info1 {
+    color: #fff;
+    background-color: #d6e9c6;
+    border-color: #d6e9c6;
+}
+
+.btn-info2 {
+    color: #fff;
+    background-color: #faebcc;
+    border-color: #faebcc;
+}
+
+.btn-info3 {
+    color: #fff;
+    background-color: #ebccd1;
+    border-color: #ebccd1;
+}
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>QSJ API Test Report</h1>
+<p class='attribute'><strong>Start Time:</strong> 2019-02-02 17:32:23</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.495679</p>
+<p class='attribute'><strong>Status:</strong> Pass 9 Error 6</p>
+
+<p class='description'>Implementation Example with: QSJ_API_Test_Report</p>
+</div>
+
+<div style="float:left; margin-left: 10px;">
+	<p> Test Case Pie charts </p>
+	<a class="btn btn-xs btn-info1">-Pass-</a><br>
+	<a class="btn btn-xs btn-info2">-Faild-</a><br>
+	<a class="btn btn-xs btn-info3">-Error-</a><br>
+</div>
+
+<div class="testChars">
+	<canvas id="myChart" width="250" height="250"></canvas>
+</div>
+
+
+
+<p id='show_detail_line' style="margin-left: 10px;">Show
+<a href='javascript:showCase(0)' class="btn btn-xs btn-primary">Summary</a>
+<a href='javascript:showCase(1)' class="btn btn-xs btn-danger">Failed</a>
+<a href='javascript:showCase(2)' class="btn btn-xs btn-info">All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row' class="panel-title">
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Administrator.auth_logout_test.AuthLogout</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
+</tr>
+
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_logout: 验证退出登录成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\utils.py", line 941, in check_header_validity
+    if not pat.match(value):
+TypeError: expected string or bytes-like object
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\auto\qsjInterface\interface\Administrator\auth_logout_test.py", line 19, in test_logout
+    self.result = requests.post(url=self.u, headers=self.h).json()
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 519, in request
+    prep = self.prepare_request(req)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 462, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\models.py", line 314, in prepare
+    self.prepare_headers(headers)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\models.py", line 448, in prepare_headers
+    check_header_validity(header)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\utils.py", line 945, in check_header_validity
+    "bytes, not %s" % (name, value, type(value)))
+requests.exceptions.InvalidHeader: Value for header {type: 2} must be of type str or bytes, not &lt;class 'int'&gt;
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_logout: 验证退出登录成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        error</a>
+
+    <div id='div_ft1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.2: Traceback (most recent call last):
+  File "F:\auto\qsjInterface\interface\Administrator\auth_logout_test.py", line 14, in tearDown
+    print(self.result)
+AttributeError: 'AuthLogout' object has no attribute 'result'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>unittest.loader._FailedTest</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td>4</td>
+    <td><a href="javascript:showClassDetail('c2',4)">Detail</a></td>
+</tr>
+
+<tr id='ft2.1' class='none'>
+    <td class='errorCase'><div class='testcase'>init_test</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        error</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.1: ImportError: Failed to import test module: Administrator.init_test
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\unittest\loader.py", line 434, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\unittest\loader.py", line 375, in _get_module_from_name
+    __import__(name)
+  File "F:\auto\qsjInterface\interface\Administrator\init_test.py", line 5, in &lt;module&gt;
+    from parameterized import parameterized
+ModuleNotFoundError: No module named 'parameterized'
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.2' class='none'>
+    <td class='errorCase'><div class='testcase'>login_by_code_test</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.2')" >
+        error</a>
+
+    <div id='div_ft2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.2: ImportError: Failed to import test module: Administrator.login_by_code_test
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\unittest\loader.py", line 434, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\unittest\loader.py", line 375, in _get_module_from_name
+    __import__(name)
+  File "F:\auto\qsjInterface\interface\Administrator\login_by_code_test.py", line 4, in &lt;module&gt;
+    from db_fixture import test_db
+  File "F:\auto\qsjInterface\db_fixture\test_db.py", line 3, in &lt;module&gt;
+    import pymysql.cursors
+ModuleNotFoundError: No module named 'pymysql'
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.3' class='none'>
+    <td class='errorCase'><div class='testcase'>login_by_pass_test</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.3')" >
+        error</a>
+
+    <div id='div_ft2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.3: ImportError: Failed to import test module: Administrator.login_by_pass_test
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\unittest\loader.py", line 434, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\unittest\loader.py", line 375, in _get_module_from_name
+    __import__(name)
+  File "F:\auto\qsjInterface\interface\Administrator\login_by_pass_test.py", line 4, in &lt;module&gt;
+    from parameterized import parameterized
+ModuleNotFoundError: No module named 'parameterized'
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.4' class='none'>
+    <td class='errorCase'><div class='testcase'>send_phone_code_test</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.4')" >
+        error</a>
+
+    <div id='div_ft2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.4: ImportError: Failed to import test module: Administrator.send_phone_code_test
+Traceback (most recent call last):
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\unittest\loader.py", line 434, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Users\dell\AppData\Local\Programs\Python\Python37\lib\unittest\loader.py", line 375, in _get_module_from_name
+    __import__(name)
+  File "F:\auto\qsjInterface\interface\Administrator\send_phone_code_test.py", line 4, in &lt;module&gt;
+    from parameterized import parameterized
+ModuleNotFoundError: No module named 'parameterized'
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Business.get_business_product_list_test.GetBusinessProductList</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_business_product_list_success: 查询大王贷款列表成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        pass</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: {'code': '200', 'data': {'picUrl': None, 'bgcolor': '#FFFFFF', 'moduleList': [{'showName': 0, 'moduleType': '2', 'showNumber': 0, 'moduleName': '申请多个产品高通过！', 'isJump': 0, 'jumpName': '', 'jumpUrl': '', 'productList': [{'controlInfo': None, 'creditAvg': 2750, 'creditMax': 3500, 'creditMin': 2000, 'desc': '不上征信通过率高，快速放款', 'icon': 'https://easyadmin.iask.com/images/image/PID97520181102144136100.jpg', 'id': '839', 'jumpType': 1, 'jumpUrl': 'http://promotion.mofangbk.com/act/light-loan-xjx-beta?hsinaif=third&amp;id=24&amp;merchant_name=wyxj&amp;invite_code=MjA0MDE3NzM=&amp;user_from=2296&amp;utm_medium=xiajieqingsongjie', 'loanCycleTagId': '', 'loanTime': 30, 'loanTypeTagIds': '', 'loancycleMax': 0, 'loancycleMin': 0, 'loancycleUnit': 0, 'moduleId': '', 'moduleTypeId': '2', 'number': 6198, 'pname': '无忧虾借', 'quotaTagId': '', 'rates': 0.02, 'remark': 'UV13 不限', 'status': 1, 'tags': '', 'tnameList': []}, {'controlInfo': None, 'creditAvg': 20500, 'creditMax': 39000, 'creditMin': 2000, 'desc': '审核3分钟下款1分钟', 'icon': 'https://easyadmin.iask.com/images/image/PID10920181107150537100.png', 'id': '892', 'jumpType': 1, 'jumpUrl': 'https://www.weidaiflower.com/?hsinaif=third&amp;channel_key=ed2c96bc-149a-41a9-80f1-b1e7865f19d1', 'loanCycleTagId': '', 'loanTime': 30, 'loanTypeTagIds': '', 'loancycleMax': 0, 'loancycleMin': 0, 'loancycleUnit': 0, 'moduleId': '', 'moduleTypeId': '2', 'number': 6136, 'pname': '微贷花', 'quotaTagId': '', 'rates': 0.03, 'remark': 'UV12不限', 'status': 1, 'tags': '', 'tnameList': []}, {'controlInfo': None, 'creditAvg': 2800, 'creditMax': 5000, 'creditMin': 600, 'desc': '新户秒过，三分钟极速到账', 'icon': 'https://easyadmin.iask.com/images/image/PID66320181107140304100.png', 'id': '768', 'jumpType': 1, 'jumpUrl': 'http://lw.agreatsun.com/charge_wallet/register.html?hsinaif=third&amp;channelId=qingsongjie', 'loanCycleTagId': '', 'loanTime': 30, 'loanTypeTagIds': '', 'loancycleMax': 0, 'loancycleMin': 0, 'loancycleUnit': 0, 'moduleId': '', 'moduleTypeId': '2', 'number': 6346, 'pname': '充电钱包', 'quotaTagId': '', 'rates': 0.05, 'remark': 'UV11 不限', 'status': 1, 'tags': '', 'tnameList': []}, {'controlInfo': None, 'creditAvg': 5500, 'creditMax': 10000, 'creditMin': 1000, 'desc': '3分钟审批30秒下款', 'icon': 'https://easyadmin.iask.com/images/image/PID65120181025192652100.jpg', 'id': '772', 'jumpType': 1, 'jumpUrl': 'http://papi.musitech8.com/h5/channelReg.html?hsinaif=third&amp;channelCode=QSJ&amp;pointCode=QSJ&amp;style=2&amp;modelType=1', 'loanCycleTagId': '', 'loanTime': 30, 'loanTypeTagIds': '', 'loancycleMax': 0, 'loancycleMin': 0, 'loancycleUnit': 0, 'moduleId': '', 'moduleTypeId': '2', 'number': 7263, 'pname': '闪到钱包', 'quotaTagId': '', 'rates': 0.03, 'remark': 'UV8', 'status': 1, 'tags': '', 'tnameList': []}]}], 'name': 'push'}, 'msg': 'ok'}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Business.get_yjkd_home_product_list.GetHomeProdcutList</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',1)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_home_product_list_success: 获取有借卡贷Tab1首页成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: {"code":"200","data":{"recommendList":[{"cfgId":null,"controlInfo":null,"creditavg":5000,"creditmax":10000,"creditmin":0,"description":"下款率86%，最高1万","id":"55920180925140247","jumpType":1,"jumpUrl":"http://papi.kangshaotec.com/h5/channelReg.html?hsinaif=third&amp;channelCode=qsj2&amp;pointCode=qsj2&amp;style=11&amp;modelType=1","loancyclemax":0,"loancyclemin":0,"loancycleunit":0,"loantime":30,"number":97154,"picUrl":"https://easyadmin.iask.com/images/image/PID39620181023173547100.png","pid":"55920180925140247","pname":"米融","rates":0.0,"remark":"","status":0,"tags":"","tnameList":[]},{"cfgId":null,"controlInfo":null,"creditavg":25000,"creditmax":50000,"creditmin":0,"description":"通过率90%芝麻分可借","id":"93120181011191708","jumpType":1,"jumpUrl":"https://www.huixiakuan.cn/?hsinaif=third&amp;channel=1283","loancyclemax":0,"loancyclemin":0,"loancycleunit":0,"loantime":30,"number":84693,"picUrl":"https://easyadmin.iask.com/images/image/PID53120181010173431100.jpg","pid":"93120181011191708","pname":"会下款","rates":0.0,"remark":"","status":0,"tags":"","tnameList":[]},{"cfgId":null,"controlInfo":null,"creditavg":5000,"creditmax":10000,"creditmin":0,"description":"有微信，轻松借","id":"79120181025183616","jumpType":1,"jumpUrl":"https://pre.iask.cn/pg/preview/qsjRegVTS/iosNav/pages/jump/index.html?productId=1003&amp;channelid=s162301&amp;forClient=qsj&amp;abgroup=register_abgroup","loancyclemax":0,"loancyclemin":0,"loancycleunit":0,"loantime":30,"number":90663,"picUrl":"https://easyadmin.iask.com/images/image/PID46320180929143400100.png","pid":"79120181025183616","pname":"闪到钱包","rates":0.0,"remark":"","status":0,"tags":"","tnameList":[]},{"cfgId":null,"controlInfo":null,"creditavg":4500,"creditmax":9000,"creditmin":0,"description":"新用户申请就放，循环额度无上限","id":"60120181025183413","jumpType":1,"jumpUrl":"https://w.url.cn/s/AWY4snt?hsinaif=third","loancyclemax":0,"loancyclemin":0,"loancycleunit":0,"loantime":30,"number":51787,"picUrl":"https://easyadmin.iask.com/images/image/PID65420181025170353100.jpg","pid":"60120181025183413","pname":"网红钱包","rates":0.0,"remark":"","status":0,"tags":"","tnameList":[]},{"cfgId":null,"controlInfo":null,"creditavg":2500,"creditmax":5000,"creditmin":0,"description":"申请秒下款~","id":"72520181025191805","jumpType":1,"jumpUrl":"http://reg.coinsls.com/borrowUser/toTgRedister?hsinaif=third&amp;code=cc9c17f60812db2ba4bac1d7f18b8854","loancyclemax":0,"loancyclemin":0,"loancycleunit":0,"loantime":30,"number":98187,"picUrl":"https://easyadmin.iask.com/images/image/PID86220181023161209100.png","pid":"72520181025191805","pname":"多多宝","rates":0.0,"remark":"","status":0,"tags":"","tnameList":[]},{"cfgId":null,"controlInfo":null,"creditavg":2500,"creditmax":5000,"creditmin":0,"description":"只需身份证，最高可贷5000","id":"79520181026205510","jumpType":1,"jumpUrl":"http://api.dpzc168.com/borrowUser/toTgRedister?hsinaif=third&amp;code=4e32d7a4abad9fdc8c3df590c48238f3","loancyclemax":0,"loancyclemin":0,"loancycleunit":0,"loantime":30,"number":49362,"picUrl":"https://easyadmin.iask.com/images/image/PID27220181026205510100.png","pid":"79520181026205510","pname":"易收宝","rates":0.0,"remark":"","status":0,"tags":"","tnameList":[]},{"cfgId":null,"controlInfo":null,"creditavg":15000,"creditmax":30000,"creditmin":0,"description":"随借随还 通过高 下款快","id":"97220181109150329","jumpType":1,"jumpUrl":"https://nhh.7rdai.com/page/test/credit?hsinaif=third&amp;channel_key=9c0e1488-ade1-461a-97d8-ce4d9d5171c8","loancyclemax":0,"loancyclemin":0,"loancycleunit":0,"loantime":30,"number":73960,"picUrl":"https://easyadmin.iask.com/images/image/PID3220181109150329100.png","pid":"97220181109150329","pname":"牛花花","rates":0.0,"remark":"","status":0,"tags":"","tnameList":[]},{"cfgId":null,"controlInfo":null,"creditavg":1750,"creditmax":3500,"creditmin":0,"description":"新用户申请，通过率高","id":"85120181109151550","jumpType":1,"jumpUrl":"http://promotion.mofangbk.com/act/light-loan-xjx-beta?hsinaif=third&amp;id=24&amp;merchant_name=wyxj&amp;invite_code=MjA0MDE3NzM=&amp;user_from=2296&amp;utm_medium=xiajieqingsongjie","loancyclemax":0,"loancyclemin":0,"loancycleunit":0,"loantime":30,"number":53446,"picUrl":"https://easyadmin.iask.com/images/image/PID69720181109151550100.png","pid":"85120181109151550","pname":"无忧虾借","rates":0.0,"remark":"","status":0,"tags":"","tnameList":[]},{"cfgId":null,"controlInfo":null,"creditavg":15000,"creditmax":30000,"creditmin":0,"description":"0门槛审核简单，轻松秒下款","id":"75920181109154515","jumpType":1,"jumpUrl":"http://wanyimoney.com/?hsinaif=third&amp;channel_key=e5809aed-7f22-41d7-a9a3-68cdfbb44916","loancyclemax":0,"loancyclemin":0,"loancycleunit":0,"loantime":30,"number":104836,"picUrl":"https://easyadmin.iask.com/images/image/PID29020181109154515100.png","pid":"75920181109154515","pname":"万亿钱袋","rates":0.0,"remark":"","status":0,"tags":"","tnameList":[]}],"entranceList":[{"description":"","ename":"test","id":"52","jumpType":1,"jumpUrl":"http://47.106.87.172/test/index","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID35220190102141346100.jpg","remark":"test_create"},{"description":"","ename":"最新上线","id":"5","jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/qsjApp/loanlist.html?id=9&amp;productId=1003","picUrl":"https://easyadmin.iask.com/images/image/PID84420180914201815100.png","remark":""},{"description":"","ename":"小额贷","id":"4","jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/qsjApp/loanlist.html?id=4&amp;productId=1003","picUrl":"https://easyadmin.iask.com/images/image/PID64920180914201804100.png","remark":""},{"description":"","ename":"芝麻分贷","id":"8","jumpType":0,"jumpUrl":"https://m-stg2.tianxiaxinyong.com/cooperation/b-test.html","picUrl":"https://easyadmin.iask.com/images/image/PID45820180914201755100.png","remark":""},{"description":"","ename":"极速贷","id":"2","jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/qsjApp/loanlist.html?id=8&amp;productId=1003","picUrl":"https://easyadmin.iask.com/images/image/PID98320180914201823100.png","remark":""},{"description":"","ename":"大额贷","id":"1","jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/qsjApp/loanlist.html?id=2&amp;productId=1003","picUrl":"https://easyadmin.iask.com/images/image/PID7720180914201832100.png","remark":""},{"description":"","ename":"热门贷款","id":"7","jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/qsjApp/loanlist.html?id=6&amp;productId=1003","picUrl":"https://easyadmin.iask.com/images/image/PID91320180914201841100.png","remark":""},{"description":"","ename":"低利息","id":"6","jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/qsjApp/loanlist.html?id=7&amp;productId=1003","picUrl":"https://easyadmin.iask.com/images/image/PID97420180914201849100.png","remark":""},{"description":"","ename":"在线办卡","id":"3","jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/business/pages/qsj/onlineCard.html","picUrl":"https://easyadmin.iask.com/images/image/PID7820180914201855100.png","remark":""}]},"msg":"ok"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Business.get_yjkd_product_list_test.GetProductList</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',1)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_product_list_success: 获取有借卡贷列表成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
+        pass</a>
+
+    <div id='div_pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.1: {'code': '200', 'data': {'orderkeys': [{'id': None, 'oid': 0, 'orderDesc': '默认排序', 'orderKey': ''}, {'id': None, 'oid': 1, 'orderDesc': '产品添加时间', 'orderKey': 'createDate'}, {'id': None, 'oid': 3, 'orderDesc': '利率', 'orderKey': 'interestRate'}, {'id': None, 'oid': 6, 'orderDesc': '综合评分', 'orderKey': 'score'}], 'bgColor': '#FFFFFF', 'listUrl': 'https://k8s-qsj-test.jie.iask.cn/pg/qsj/index.html?cfgId=NPL94820190117201810100', 'productList': []}, 'msg': 'ok'}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>QSJ.QueryLoanProductByListId.QueryLoanProductByListId</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',1)">Detail</a></td>
+</tr>
+
+<tr id='pt6.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_loan_product_by_listId_success: 获取轻松借列表/首页极速下款URL不带参数成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
+        pass</a>
+
+    <div id='div_pt6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.1: {"code":"200","data":{"tagList":[{"defaultvalue":"","id":null,"key":"1001_bcb3ff9cf3b1458bb1706fd08d8f2133","orderNo":1,"pcode":"1001","tid":"1e82fab4df60487397a3cb1b9ebed392","type":"100","value":"大额贷"},{"defaultvalue":"","id":null,"key":"1001_282fec3e1de0458698252e42feb6e2d7","orderNo":2,"pcode":"1001","tid":"f1f047a589a841988df5d8e5f24450bb","type":"100","value":"小额贷"},{"defaultvalue":"","id":null,"key":"1002_f346921dead249f69d18deb14c18b248","orderNo":1,"pcode":"1002","tid":"63dc688f4ce849e0aef9e02b5d1febd7","type":"100","value":"7天周转"},{"defaultvalue":"","id":null,"key":"1002_b56dcfea207a44fa837e96a68275418d","orderNo":2,"pcode":"1002","tid":"a84e98facda2499da9493627cbcc9918","type":"100","value":"长期贷"},{"defaultvalue":"","id":null,"key":"1003_c148abe378c84b4ebe1d854f05de3fd4","orderNo":1,"pcode":"1003","tid":"3f706a481e334b3c96e1f0a36d2c4bc1","type":"100","value":"新口子"},{"defaultvalue":"","id":null,"key":"1003_5c5577cc2f9347ecb13d1599cb2927bb","orderNo":2,"pcode":"1003","tid":"e8afe93acd504736bfb5061a5849c691","type":"100","value":"不查征信"},{"defaultvalue":"","id":null,"key":"1003_9934b20bf4ca4a2db47a5866318e1a30","orderNo":3,"pcode":"1003","tid":"4e0f5c2eb6a04b048ce3b3dadbb30139","type":"100","value":"芝麻分贷"},{"defaultvalue":"","id":null,"key":"1003_a587d67fb04b457583eb923a9a6ea6db","orderNo":4,"pcode":"1003","tid":"49c03ea70c4d4b4b9e0d921da44f328f","type":"100","value":"只需身份证"}],"productListInfo":{"bgcolor":"#CCFFCC","moduleType":"1","name":"极速下款","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID75220190110162525100.png","productCategory":""},"totalShowNumber":7,"productList":[{"controlInfo":{"applyDay":1,"applyTime":11,"progress":13,"progressType":0,"showType":0},"creditAvg":1000,"creditMax":1500,"creditMin":500,"desc":"测试","icon":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID77320190119141441100.png","id":"139009644538195968","jumpType":1,"jumpUrl":"https://www.hao123.com/licai","loanCycleTagId":"a84e98facda2499da9493627cbcc9918","loanTime":0,"loanTypeTagIds":"","loancycleMax":6,"loancycleMin":4,"loancycleUnit":2,"moduleId":"","moduleTypeId":"1","number":958,"pname":"auto4","quotaTagId":"f1f047a589a841988df5d8e5f24450bb","rates":101.0,"remark":"323232","status":1,"tags":"","tnameList":["小额贷","长期贷"]},{"controlInfo":{"applyDay":1,"applyTime":11,"progress":13,"progressType":0,"showType":0},"creditAvg":200,"creditMax":300,"creditMin":100,"desc":"1","icon":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID29720190119162653100.png","id":"139042910490161152","jumpType":1,"jumpUrl":"https://www.xin.com/shenzhen/","loanCycleTagId":"a84e98facda2499da9493627cbcc9918","loanTime":0,"loanTypeTagIds":"3f706a481e334b3c96e1f0a36d2c4bc1,49c03ea70c4d4b4b9e0d921da44f328f","loancycleMax":2,"loancycleMin":1,"loancycleUnit":2,"moduleId":"","moduleTypeId":"1","number":1140,"pname":"auto3","quotaTagId":"f1f047a589a841988df5d8e5f24450bb","rates":99.99,"remark":"1234","status":1,"tags":"","tnameList":["小额贷","长期贷","新口子","只需身份证"]},{"controlInfo":{"applyDay":1,"applyTime":11,"progress":13,"progressType":0,"showType":0},"creditAvg":4000,"creditMax":5000,"creditMin":3000,"desc":"测试","icon":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID59920190119112947100.png","id":"138682070268227584","jumpType":1,"jumpUrl":"http://promotion.mofangbk.com/act/light-loan-xjx-beta","loanCycleTagId":"a84e98facda2499da9493627cbcc9918","loanTime":0,"loanTypeTagIds":"4e0f5c2eb6a04b048ce3b3dadbb30139","loancycleMax":3,"loancycleMin":1,"loancycleUnit":2,"moduleId":"","moduleTypeId":"1","number":1146,"pname":"测试产品3","quotaTagId":"f1f047a589a841988df5d8e5f24450bb","rates":100.0,"remark":"测","status":1,"tags":"","tnameList":["小额贷","长期贷","芝麻分贷"]},{"controlInfo":{"applyDay":1,"applyTime":11,"progress":13,"progressType":0,"showType":0},"creditAvg":5000,"creditMax":9000,"creditMin":1000,"desc":"1","icon":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID29020190120172450100.png","id":"139780728518955008","jumpType":1,"jumpUrl":"https://interface.mifaqianbao.com/h5-app/vhtml/spread_register_jnq1.vhtml?partnerNo=620069","loanCycleTagId":"63dc688f4ce849e0aef9e02b5d1febd7","loanTime":0,"loanTypeTagIds":"49c03ea70c4d4b4b9e0d921da44f328f","loancycleMax":6,"loancycleMin":4,"loancycleUnit":1,"moduleId":"","moduleTypeId":"1","number":1086,"pname":"自动下线产品验证","quotaTagId":"f1f047a589a841988df5d8e5f24450bb","rates":12.0,"remark":"","status":1,"tags":"","tnameList":["小额贷","7天周转","只需身份证"]},{"controlInfo":{"applyDay":1,"applyTime":11,"progress":13,"progressType":0,"showType":0},"creditAvg":5000,"creditMax":9000,"creditMin":1000,"desc":"1","icon":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID29020190120172450100.png","id":"139419863240347648","jumpType":1,"jumpUrl":"http://chorme.com","loanCycleTagId":"63dc688f4ce849e0aef9e02b5d1febd7","loanTime":0,"loanTypeTagIds":"4e0f5c2eb6a04b048ce3b3dadbb30139","loancycleMax":6,"loancycleMin":4,"loancycleUnit":1,"moduleId":"","moduleTypeId":"1","number":986,"pname":"auto1","quotaTagId":"f1f047a589a841988df5d8e5f24450bb","rates":12.0,"remark":"","status":1,"tags":"","tnameList":["小额贷","7天周转","芝麻分贷"]},{"controlInfo":{"applyDay":1,"applyTime":11,"progress":0,"progressType":0,"showType":0},"creditAvg":7500,"creditMax":10000,"creditMin":5000,"desc":"测试","icon":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID98220190119113037100.png","id":"138682894935502848","jumpType":1,"jumpUrl":"https://nhh.7rdai.com/page/test/credit?channel_key=9c0e1488-ade1-461a-97d8-ce4d9d5171c8","loanCycleTagId":"a84e98facda2499da9493627cbcc9918","loanTime":0,"loanTypeTagIds":"49c03ea70c4d4b4b9e0d921da44f328f","loancycleMax":6,"loancycleMin":3,"loancycleUnit":2,"moduleId":"","moduleTypeId":"1","number":1149,"pname":"测试产品4","quotaTagId":"f1f047a589a841988df5d8e5f24450bb","rates":99.1,"remark":"牛牛","status":1,"tags":"","tnameList":["小额贷","长期贷","只需身份证"]},{"controlInfo":{"applyDay":1,"applyTime":11,"progress":13,"progressType":0,"showType":0},"creditAvg":50000,"creditMax":90000,"creditMin":10000,"desc":"1","icon":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID29020190120172450100.png","id":"139703580621889536","jumpType":1,"jumpUrl":"http://www.baiduceshi.com","loanCycleTagId":"63dc688f4ce849e0aef9e02b5d1febd7","loanTime":0,"loanTypeTagIds":"4e0f5c2eb6a04b048ce3b3dadbb30139","loancycleMax":6,"loancycleMin":4,"loancycleUnit":1,"moduleId":"","moduleTypeId":"1","number":974,"pname":"urlId不一致","quotaTagId":"1e82fab4df60487397a3cb1b9ebed392","rates":12.0,"remark":"","status":1,"tags":"","tnameList":["大额贷","7天周转","芝麻分贷"]},{"controlInfo":{"applyDay":1,"applyTime":11,"progress":0,"progressType":0,"showType":0},"creditAvg":1500,"creditMax":2000,"creditMin":1000,"desc":"1","icon":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID68020190119162912100.png","id":"139043493796212736","jumpType":1,"jumpUrl":"https://sz.58.com/","loanCycleTagId":"a84e98facda2499da9493627cbcc9918","loanTime":0,"loanTypeTagIds":"","loancycleMax":2,"loancycleMin":2,"loancycleUnit":2,"moduleId":"","moduleTypeId":"1","number":1083,"pname":"auto2","quotaTagId":"f1f047a589a841988df5d8e5f24450bb","rates":34.0,"remark":"1234","status":1,"tags":"","tnameList":["小额贷","长期贷"]}]},"msg":"ok"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>QSJ.get_credit_helper_test.GetCreditHelper</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c7',1)">Detail</a></td>
+</tr>
+
+<tr id='pt7.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_credit_helper_success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.1')" >
+        pass</a>
+
+    <div id='div_pt7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.1: {"code":"200","data":{"creditFindBanner":[{"channel":"100","createTime":null,"creatime":"2019-01-05 13:47:51","creator":33,"desc":"","deviceType":null,"endTime":null,"frequency":0,"id":"535","imgMd5":"","imgSize":null,"jumpType":1,"jumpUrl":"https://k8s-qsj-test.easyadmin.iask.cn/html/index.html?ssid=Easy2622019010511151233&amp;name=will","jumpUrlList":null,"locationType":0,"name":"拼多多","orderNo":null,"pageType":0,"picId":"PID57820190105134750100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID57820190105134750100.png","remark":"","startTime":null,"status":1,"type":"113","updatime":"2019-01-05 13:48:32","updator":33},{"channel":"100","createTime":null,"creatime":"2018-10-11 21:24:33","creator":23,"desc":"","deviceType":null,"endTime":null,"frequency":0,"id":"111","imgMd5":"c7d581ebda01fbdffbeceb7c76249f99","imgSize":9568,"jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL26420190102165303100","jumpUrlList":null,"locationType":0,"name":"贷前检查","orderNo":2,"pageType":0,"picId":"PID15320190102162111100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID15320190102162111100.png","remark":"","startTime":null,"status":1,"type":"113","updatime":"2019-01-10 14:00:09","updator":28},{"channel":"100","createTime":null,"creatime":"2018-10-11 21:24:05","creator":23,"desc":"","deviceType":null,"endTime":null,"frequency":0,"id":"110","imgMd5":"ebc1b574f138371732ed694da64a222f","imgSize":53258,"jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL26420190102165303100","jumpUrlList":null,"locationType":0,"name":"拒贷诊断","orderNo":3,"pageType":0,"picId":"PID4320190102162139100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID4320190102162139100.png","remark":"","startTime":null,"status":1,"type":"113","updatime":"2019-01-04 11:43:20","updator":28}],"otherBanner":[{"channel":"100","createTime":null,"creatime":"2018-10-11 21:24:33","creator":23,"desc":"","deviceType":null,"endTime":null,"frequency":0,"id":"121","imgMd5":"c7d581ebda01fbdffbeceb7c76249f99","imgSize":9568,"jumpType":0,"jumpUrl":"http://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL64920190102155742100","jumpUrlList":null,"locationType":0,"name":"信用卡提现","orderNo":1,"pageType":0,"picId":"PID29120190102162213100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID29120190102162213100.png","remark":"","startTime":null,"status":1,"type":"114","updatime":"2019-01-05 18:57:01","updator":28},{"channel":"100","createTime":null,"creatime":"2018-10-11 21:25:21","creator":23,"desc":"","deviceType":null,"endTime":null,"frequency":0,"id":"122","imgMd5":"5cc75088dc0f86c8dbbbf45673293d18","imgSize":59638,"jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/qsjApp/loanlist.html?id=6","jumpUrlList":null,"locationType":0,"name":"算一卦","orderNo":2,"pageType":0,"picId":"PID94520190102162239100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID94520190102162239100.png","remark":"","startTime":null,"status":1,"type":"114","updatime":"2019-01-02 16:22:40","updator":28}]},"msg":"ok"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>QSJ.get_home_product_list_test.GetHomeProductList</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',1)">Detail</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_home_product_list_success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.1')" >
+        pass</a>
+
+    <div id='div_pt8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.1: {"code":"200","data":{"recommendList":[{"cfgId":1,"controlInfo":{"applyDay":1,"applyTime":11,"progress":0,"progressType":0,"showType":0},"creditavg":500,"creditmax":500,"creditmin":500,"description":"审核放款，低利息快速下5万","id":"1360187437","jumpType":1,"jumpUrl":"https://pre.iask.cn/pg/preview/jumpPage/index.html?hsinaif=third&amp;subLink=123457693709074432&amp;linkName=%E8%BF%9B%E9%87%91%E5%B2%81%E6%9C%88&amp;random=59058&amp;sign=b651e20f022f26b078d3d0dbaf45bd9e&amp;out=0","loancyclemax":14,"loancyclemin":7,"loancycleunit":1,"loantime":30,"number":79598,"picUrl":"https://preadmin.iask.cn/image/PID35520181207121106100.png","pid":"123395748146544640","pname":"精灵口袋","rates":0.05,"remark":"","status":1,"tags":"","tnameList":["小额贷","7天周转","新口子"]},{"cfgId":1,"controlInfo":{"applyDay":1,"applyTime":11,"progress":26,"progressType":0,"showType":0},"creditavg":2500,"creditmax":4000,"creditmin":1000,"description":"15","id":"1360187437","jumpType":1,"jumpUrl":"https://pre.iask.cn/pg/preview/jumpPage/index.html?subLink=125992835073802240&amp;linkName=360%E5%AE%9D%E8%A2%8B&amp;random=52110&amp;sign=356276688a52d330ca987e5f5d8b2358&amp;out=1","loancyclemax":7,"loancyclemin":1,"loancycleunit":1,"loantime":30,"number":4350,"picUrl":"https://preadmin.iask.cn/image/PID61120181207121335100.png","pid":"123396370241519616","pname":"jerryttttt","rates":0.05,"remark":"","status":1,"tags":"","tnameList":["小额贷","7天周转","新口子"]},{"cfgId":1,"controlInfo":{"applyDay":1,"applyTime":11,"progress":0,"progressType":0,"showType":0},"creditavg":1500,"creditmax":2000,"creditmin":1000,"description":"1","id":"1360187437","jumpType":1,"jumpUrl":"https://sz.58.com/","loancyclemax":2,"loancyclemin":2,"loancycleunit":2,"loantime":0,"number":1083,"picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID68020190119162912100.png","pid":"139043493796212736","pname":"auto2","rates":34.0,"remark":"","status":1,"tags":"","tnameList":["小额贷","长期贷"]},{"cfgId":1,"controlInfo":{"applyDay":1,"applyTime":11,"progress":0,"progressType":0,"showType":0},"creditavg":125,"creditmax":150,"creditmin":100,"description":"1","id":"1360187437","jumpType":1,"jumpUrl":"https://www.163.com/","loancyclemax":1,"loancyclemin":1,"loancycleunit":3,"loantime":0,"number":948,"picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID39120190120104808100.png","pid":"139319945851015168","pname":"UV1","rates":0.04,"remark":"","status":1,"tags":"","tnameList":["小额贷","长期贷","新口子"]},{"cfgId":1,"controlInfo":{"applyDay":1,"applyTime":11,"progress":0,"progressType":0,"showType":0},"creditavg":500,"creditmax":500,"creditmin":500,"description":"t","id":"1360187437","jumpType":1,"jumpUrl":"https://www.qq.com/","loancyclemax":13,"loancyclemin":12,"loancycleunit":2,"loantime":0,"number":893,"picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID79920190120104911100.png","pid":"139320211937660928","pname":"uv2","rates":9.0,"remark":"","status":1,"tags":"","tnameList":["小额贷","长期贷","不查征信"]}],"recommondListTip":"小贴士：同时申请3家以上，下款成功率100%","topCategory":[{"description":"","ename":"极速下款","id":"66","jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL51420190110153458100&amp;queryType=1","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID28120190104150916100.png","remark":"分类入口"},{"description":"","ename":"最新上线","id":"41","jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL7920190123165743100&amp;queryType=1","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID35520190123165855100.png","remark":"最新上线"},{"description":"","ename":"芝麻分贷","id":"43","jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL20520190123171909100&amp;queryType=1","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID96820190105141632100.png","remark":"芝麻分贷"},{"description":"","ename":"小额贷款","id":"45","jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL26420190102165303100&amp;queryType=1","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID13420190122135746100.png","remark":"小额贷款"},{"description":"","ename":"大额贷款","id":"44","jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL3920190122152529100&amp;queryType=1","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID51420190122152613100.png","remark":"大额贷款"}],"companyBanner":[{"channel":"100","createTime":null,"creatime":"2018-10-11 21:24:05","creator":23,"desc":"","deviceType":null,"endTime":null,"frequency":0,"id":"100","imgMd5":"ebc1b574f138371732ed694da64a222f","imgSize":53258,"jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/business/pages/yj/onlineCard.html","jumpUrlList":null,"locationType":0,"name":"在线办卡","orderNo":5,"pageType":0,"picId":"PID49220190103164924100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID49220190103164924100.png","remark":"","startTime":null,"status":1,"type":"112","updatime":"2018-11-14 11:07:39","updator":23}],"topBgUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID42720190123224615100.png","borrowBanner":[{"channel":"100","createTime":null,"creatime":"2018-10-11 21:24:33","creator":23,"desc":"","deviceType":null,"endTime":null,"frequency":0,"id":"81","imgMd5":"c7d581ebda01fbdffbeceb7c76249f99","imgSize":9568,"jumpType":1,"jumpUrl":"http://k8s-qsj-test.jie.iask.cn/pg/qsjApp/recommend.html?cfgId=NPL70020190102163656100","jumpUrlList":null,"locationType":0,"name":"智能资料推荐","orderNo":6,"pageType":0,"picId":"PID34120190102151248100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID34120190102151248100.png","remark":"","startTime":null,"status":1,"type":"110","updatime":"2019-01-05 16:14:26","updator":28}],"creditBanner":[{"channel":"100","createTime":null,"creatime":"2018-10-11 21:25:21","creator":23,"desc":"","deviceType":null,"endTime":null,"frequency":0,"id":"92","imgMd5":"5cc75088dc0f86c8dbbbf45673293d18","imgSize":59638,"jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL64920190102155742100","jumpUrlList":null,"locationType":0,"name":"热门贷款","orderNo":2,"pageType":0,"picId":"PID73120190102170808100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID73120190102170808100.png","remark":"","startTime":null,"status":1,"type":"111","updatime":"2019-01-22 11:06:54","updator":111}]},"msg":"ok"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>QSJ.get_me_info_test.GetMeInfo</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c9',1)">Detail</a></td>
+</tr>
+
+<tr id='pt9.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_me_info_success: 用户未登录查看个人中心成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.1')" >
+        pass</a>
+
+    <div id='div_pt9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.1: {'code': '200', 'data': {'recommendInfo': {'productMoreUrl': 'http://k8s-qsj-test.jie.iask.cn/pg/qsjAppV2/query.html?cfgId=16&amp;hsinaifNeedFullWin=2', 'productList': [{'controlInfo': {'applyDay': 1, 'applyTime': 11, 'progress': 0, 'progressType': 0, 'showType': 0}, 'creditAvg': 7500, 'creditMax': 10000, 'creditMin': 5000, 'desc': '测试', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID98220190119113037100.png', 'id': '138682894935502848', 'jumpType': 1, 'jumpUrl': 'https://nhh.7rdai.com/page/test/credit?channel_key=9c0e1488-ade1-461a-97d8-ce4d9d5171c8', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': '49c03ea70c4d4b4b9e0d921da44f328f', 'loancycleMax': 6, 'loancycleMin': 3, 'loancycleUnit': 2, 'moduleId': '', 'moduleTypeId': '1', 'number': 1149, 'pname': '测试产品4', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 99.1, 'remark': '牛牛', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷', '只需身份证']}, {'controlInfo': {'applyDay': 1, 'applyTime': 11, 'progress': 0, 'progressType': 0, 'showType': 0}, 'creditAvg': 1500, 'creditMax': 2000, 'creditMin': 1000, 'desc': '1', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID68020190119162912100.png', 'id': '139043493796212736', 'jumpType': 1, 'jumpUrl': 'https://sz.58.com/', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': '', 'loancycleMax': 2, 'loancycleMin': 2, 'loancycleUnit': 2, 'moduleId': '', 'moduleTypeId': '1', 'number': 1083, 'pname': 'auto2', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 34.0, 'remark': '1234', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷']}, {'controlInfo': {'applyDay': 1, 'applyTime': 11, 'progress': 13, 'progressType': 0, 'showType': 0}, 'creditAvg': 50000, 'creditMax': 90000, 'creditMin': 10000, 'desc': '1', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID29020190120172450100.png', 'id': '139703580621889536', 'jumpType': 1, 'jumpUrl': 'http://www.baiduceshi.com', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 0, 'loanTypeTagIds': '4e0f5c2eb6a04b048ce3b3dadbb30139', 'loancycleMax': 6, 'loancycleMin': 4, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '1', 'number': 974, 'pname': 'urlId不一致', 'quotaTagId': '1e82fab4df60487397a3cb1b9ebed392', 'rates': 12.0, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['大额贷', '7天周转', '芝麻分贷']}]}, 'userInfo': {'login': False, 'username': ''}, 'topBannerInfo': {'showAttend': True, 'bannerInfo': [{'channel': '100', 'createTime': None, 'creatime': '2018-10-11 21:24:05', 'creator': 23, 'desc': '', 'deviceType': None, 'endTime': None, 'frequency': 0, 'id': '130', 'imgMd5': 'ebc1b574f138371732ed694da64a222f', 'imgSize': 53258, 'jumpType': 1, 'jumpUrl': 'https://jie.iask.cn/pg/product/business/pages/yj/onlineCard.html', 'jumpUrlList': None, 'locationType': 0, 'name': '在线办卡', 'orderNo': 1, 'pageType': 0, 'picId': 'PID46620190104130040100', 'picUrl': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID46620190104130040100.png', 'remark': '', 'startTime': None, 'status': 1, 'type': '115', 'updatime': '2019-01-05 13:50:31', 'updator': 33}, {'channel': '100', 'createTime': None, 'creatime': '2018-10-11 21:24:33', 'creator': 23, 'desc': '', 'deviceType': None, 'endTime': None, 'frequency': 0, 'id': '131', 'imgMd5': 'c7d581ebda01fbdffbeceb7c76249f99', 'imgSize': 9568, 'jumpType': 1, 'jumpUrl': 'https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL64920190102155742100', 'jumpUrlList': None, 'locationType': 0, 'name': '低利息', 'orderNo': 2, 'pageType': 0, 'picId': 'PID34620190102205810100', 'picUrl': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID34620190102205810100.png', 'remark': '', 'startTime': None, 'status': 1, 'type': '115', 'updatime': '2019-01-05 13:50:31', 'updator': 33}], 'attendanceInfo': {'attendTime': None, 'continueDay': 0, 'currentTime': '2019-02-02 17:32:23', 'targetType': 'creditHome', 'template': '{"actionButtonJumpUrl":{"creditHome":"http://k8s-qsj-test.jie.iask.cn/pg/qsjApp/creditreport.html","creditHistory":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/historylist.html"},"actionButtonText":{"todayUnfinish":"立即签到","todayFinished":"今日已签到","allFinished":"查看礼物"},"popupAdvertUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID5420190104145032100.png","attendStatusText":["参与签到，100%免费获得个人信用报告!","再签到6天即可免费获得个人信用报告!","再签到5天即可免费获得个人信用报告!","再签到4天即可免费获得个人信用报告!","再签到3天即可免费获得个人信用报告!","再签到2天即可免费获得个人信用报告!","再签到1天即可免费获得个人信用报告!","恭喜你免费获得个人信用报告!"]}', 'todayAttend': False, 'totalDay': 7}}, 'categoryInfo': [{'description': '', 'ename': '贷款大全', 'id': '64', 'jumpType': 0, 'jumpUrl': 'https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL26420190102165303100', 'picUrl': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID43820190104130311100.png', 'remark': '默认值'}, {'description': '', 'ename': '信用超市', 'id': '49', 'jumpType': 1, 'jumpUrl': 'https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL28420190102135050100&amp;queryType=1', 'picUrl': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID66720190105131628100.png', 'remark': ''}, {'description': '', 'ename': '在线办卡', 'id': '51', 'jumpType': 1, 'jumpUrl': 'https://pre.iask.cn/pg/preview/jumpPage/index.html?subLink=123457693709074432&amp;linkName=%E8%BF%9B%E9%87%91%E5%B2%81%E6%9C%88&amp;random=59058&amp;sign=b651e20f022f26b078d3d0dbaf45bd9e&amp;out=0&amp;queryType', 'picUrl': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID85120190105131243100.png', 'remark': '1234'}, {'description': '', 'ename': '信用卡提现', 'id': '53', 'jumpType': 1, 'jumpUrl': 'http://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL64920190102155742100', 'picUrl': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID90420190105131600100.png', 'remark': ''}, {'description': '', 'ename': '现下大额贷', 'id': '50', 'jumpType': 1, 'jumpUrl': 'https://jie.iask.cn/pg/product/qsjApp/loanlist.html?id=5', 'picUrl': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID35220190105131541100.png', 'remark': ''}, {'description': '', 'ename': '特惠活动', 'id': '54', 'jumpType': 1, 'jumpUrl': 'http://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL64920190102155742100', 'picUrl': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID12220190105131516100.png', 'remark': ''}, {'description': '', 'ename': '财运通', 'id': '55', 'jumpType': 1, 'jumpUrl': 'https://jie.iask.cn/pg/product/qsjApp/loanlist.html?id=7', 'picUrl': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID89620190105131339100.png', 'remark': ''}, {'description': '', 'ename': '娱乐', 'id': '56', 'jumpType': 1, 'jumpUrl': 'https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL70020190102163656100', 'picUrl': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID45620190105131421100.png', 'remark': ''}]}, 'msg': 'ok'}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>QSJ.get_new_loan_product.GetNewLoanProduct</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',1)">Detail</a></td>
+</tr>
+
+<tr id='pt10.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_get_new_loan_product_success: 获取新口子列表成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.1')" >
+        pass</a>
+
+    <div id='div_pt10.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.1: {'code': '200', 'data': {'productList': [{'controlInfo': None, 'creditAvg': 5000, 'creditMax': 9000, 'creditMin': 1000, 'desc': '1', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID29020190120172450100.png', 'id': '139780728518955008', 'jumpType': 1, 'jumpUrl': 'https://interface.mifaqianbao.com/h5-app/vhtml/spread_register_jnq1.vhtml?partnerNo=620069', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 0, 'loanTypeTagIds': '49c03ea70c4d4b4b9e0d921da44f328f', 'loancycleMax': 6, 'loancycleMin': 4, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 1086, 'pname': '自动下线产品验证', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 12.0, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转', '只需身份证']}, {'controlInfo': None, 'creditAvg': 50000, 'creditMax': 90000, 'creditMin': 10000, 'desc': '1', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID29020190120172450100.png', 'id': '139703580621889536', 'jumpType': 1, 'jumpUrl': 'http://www.baiduceshi.com', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 0, 'loanTypeTagIds': '4e0f5c2eb6a04b048ce3b3dadbb30139', 'loancycleMax': 6, 'loancycleMin': 4, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 974, 'pname': 'urlId不一致', 'quotaTagId': '1e82fab4df60487397a3cb1b9ebed392', 'rates': 12.0, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['大额贷', '7天周转', '芝麻分贷']}, {'controlInfo': None, 'creditAvg': 5000, 'creditMax': 9000, 'creditMin': 1000, 'desc': '1', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID29020190120172450100.png', 'id': '139419863240347648', 'jumpType': 1, 'jumpUrl': 'http://chorme.com', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 0, 'loanTypeTagIds': '4e0f5c2eb6a04b048ce3b3dadbb30139', 'loancycleMax': 6, 'loancycleMin': 4, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 986, 'pname': 'auto1', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 12.0, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转', '芝麻分贷']}, {'controlInfo': None, 'creditAvg': 900, 'creditMax': 901, 'creditMin': 900, 'desc': '6', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID26920190120105031100.png', 'id': '139320545061867520', 'jumpType': 1, 'jumpUrl': 'https://nhh.7rdai.com/page/test/credit?channel_key=9c0e1488-ade1-461a-97d8-ce4d9d5171c8', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 0, 'loanTypeTagIds': 'e8afe93acd504736bfb5061a5849c691', 'loancycleMax': 6, 'loancycleMin': 6, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 1076, 'pname': 'uv3', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 6.0, 'remark': '新浪', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转', '不查征信']}, {'controlInfo': None, 'creditAvg': 500, 'creditMax': 500, 'creditMin': 500, 'desc': 't', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID79920190120104911100.png', 'id': '139320211937660928', 'jumpType': 1, 'jumpUrl': 'https://www.qq.com/', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': 'e8afe93acd504736bfb5061a5849c691', 'loancycleMax': 13, 'loancycleMin': 12, 'loancycleUnit': 2, 'moduleId': '', 'moduleTypeId': '', 'number': 893, 'pname': 'uv2', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 9.0, 'remark': 'QQ', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷', '不查征信']}, {'controlInfo': None, 'creditAvg': 125, 'creditMax': 150, 'creditMin': 100, 'desc': '1', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID39120190120104808100.png', 'id': '139319945851015168', 'jumpType': 1, 'jumpUrl': 'https://www.163.com/', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': '3f706a481e334b3c96e1f0a36d2c4bc1', 'loancycleMax': 1, 'loancycleMin': 1, 'loancycleUnit': 3, 'moduleId': '', 'moduleTypeId': '', 'number': 948, 'pname': 'UV1', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 0.04, 'remark': 'uvjiaz', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷', '新口子']}, {'controlInfo': None, 'creditAvg': 1500, 'creditMax': 2000, 'creditMin': 1000, 'desc': '1', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID68020190119162912100.png', 'id': '139043493796212736', 'jumpType': 1, 'jumpUrl': 'https://sz.58.com/', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': '', 'loancycleMax': 2, 'loancycleMin': 2, 'loancycleUnit': 2, 'moduleId': '', 'moduleTypeId': '', 'number': 1083, 'pname': 'auto2', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 34.0, 'remark': '1234', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷']}, {'controlInfo': None, 'creditAvg': 200, 'creditMax': 300, 'creditMin': 100, 'desc': '1', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID29720190119162653100.png', 'id': '139042910490161152', 'jumpType': 1, 'jumpUrl': 'https://www.xin.com/shenzhen/', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': '3f706a481e334b3c96e1f0a36d2c4bc1,49c03ea70c4d4b4b9e0d921da44f328f', 'loancycleMax': 2, 'loancycleMin': 1, 'loancycleUnit': 2, 'moduleId': '', 'moduleTypeId': '', 'number': 1140, 'pname': 'auto3', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 99.99, 'remark': '1234', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷', '新口子', '只需身份证']}, {'controlInfo': None, 'creditAvg': 1000, 'creditMax': 1500, 'creditMin': 500, 'desc': '测试', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID77320190119141441100.png', 'id': '139009644538195968', 'jumpType': 1, 'jumpUrl': 'https://www.hao123.com/licai', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': '', 'loancycleMax': 6, 'loancycleMin': 4, 'loancycleUnit': 2, 'moduleId': '', 'moduleTypeId': '', 'number': 958, 'pname': 'auto4', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 101.0, 'remark': '323232', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷']}, {'controlInfo': None, 'creditAvg': 150, 'creditMax': 200, 'creditMin': 100, 'desc': '芝麻分贷', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID67820190118190152100.png', 'id': '138719338659950592', 'jumpType': 1, 'jumpUrl': 'http://192.168.1.170/jumpPage/index.html?subLink=139001837541748736&amp;linkName=%E6%B5%8B%E8%AF%95%E4%BA%A7%E5%93%811&amp;random=86085&amp;sign=c52ab8aa31e8f53ed9861e09ced645bf&amp;out', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': '', 'loancycleMax': 2, 'loancycleMin': 1, 'loancycleUnit': 3, 'moduleId': '', 'moduleTypeId': '', 'number': 1058, 'pname': '测试控量时间展示1', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 6.0, 'remark': '芝麻分贷', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷']}, {'controlInfo': None, 'creditAvg': 7500, 'creditMax': 10000, 'creditMin': 5000, 'desc': '测试', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID98220190119113037100.png', 'id': '138682894935502848', 'jumpType': 1, 'jumpUrl': 'https://nhh.7rdai.com/page/test/credit?channel_key=9c0e1488-ade1-461a-97d8-ce4d9d5171c8', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': '49c03ea70c4d4b4b9e0d921da44f328f', 'loancycleMax': 6, 'loancycleMin': 3, 'loancycleUnit': 2, 'moduleId': '', 'moduleTypeId': '', 'number': 1149, 'pname': '测试产品4', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 99.1, 'remark': '牛牛', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷', '只需身份证']}, {'controlInfo': None, 'creditAvg': 4000, 'creditMax': 5000, 'creditMin': 3000, 'desc': '测试', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID59920190119112947100.png', 'id': '138682070268227584', 'jumpType': 1, 'jumpUrl': 'http://promotion.mofangbk.com/act/light-loan-xjx-beta', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': '4e0f5c2eb6a04b048ce3b3dadbb30139', 'loancycleMax': 3, 'loancycleMin': 1, 'loancycleUnit': 2, 'moduleId': '', 'moduleTypeId': '', 'number': 1146, 'pname': '测试产品3', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 100.0, 'remark': '测', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷', '芝麻分贷']}, {'controlInfo': None, 'creditAvg': 2000, 'creditMax': 3000, 'creditMin': 1000, 'desc': '测试产品2', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID56020190119112932100.png', 'id': '138680890624421888', 'jumpType': 1, 'jumpUrl': 'http://wanyimoney.com/?channel_key=e5809aed-7f22-41d7-a9a3-68cdfbb44916', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 0, 'loanTypeTagIds': 'e8afe93acd504736bfb5061a5849c691', 'loancycleMax': 7, 'loancycleMin': 7, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 1130, 'pname': '测试产品2', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 0.03, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转', '不查征信']}, {'controlInfo': None, 'creditAvg': 550, 'creditMax': 1000, 'creditMin': 100, 'desc': '1', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID92620190118142400100.png', 'id': '138649407084265472', 'jumpType': 1, 'jumpUrl': 'https://w.url.cn/s/Ai3OQ1A', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 0, 'loanTypeTagIds': '3f706a481e334b3c96e1f0a36d2c4bc1', 'loancycleMax': 1, 'loancycleMin': 1, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 1148, 'pname': '产品-1', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 1.0, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转', '新口子']}, {'controlInfo': None, 'creditAvg': 15050, 'creditMax': 30000, 'creditMin': 100, 'desc': '1', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID8620190116095836100.png', 'id': '137857843772751872', 'jumpType': 1, 'jumpUrl': 'http://biadu.com', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 0, 'loanTypeTagIds': '3f706a481e334b3c96e1f0a36d2c4bc1', 'loancycleMax': 3, 'loancycleMin': 1, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 1436, 'pname': '控量1', 'quotaTagId': '1e82fab4df60487397a3cb1b9ebed392', 'rates': 1.0, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['大额贷', '7天周转', '新口子']}, {'controlInfo': None, 'creditAvg': 7500, 'creditMax': 10000, 'creditMin': 5000, 'desc': '中速下款，分数低，额度中', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID84020190110152848100.png', 'id': '135767633631084544', 'jumpType': 1, 'jumpUrl': 'http://itest.com', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': '4e0f5c2eb6a04b048ce3b3dadbb30139', 'loancycleMax': 3, 'loancycleMin': 1, 'loancycleUnit': 2, 'moduleId': '', 'moduleTypeId': '', 'number': 1718, 'pname': 'Test_model0(复制)', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 0.03, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷', '芝麻分贷']}, {'controlInfo': None, 'creditAvg': 4000, 'creditMax': 5000, 'creditMin': 3000, 'desc': '中速下款，分数低，额度低', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID84020190110152848100.png', 'id': '135767208710340608', 'jumpType': 1, 'jumpUrl': 'http://baidu.com', 'loanCycleTagId': 'a84e98facda2499da9493627cbcc9918', 'loanTime': 0, 'loanTypeTagIds': 'e8afe93acd504736bfb5061a5849c691', 'loancycleMax': 3, 'loancycleMin': 1, 'loancycleUnit': 2, 'moduleId': '', 'moduleTypeId': '', 'number': 1695, 'pname': 'Test_model0(复制)', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 0.03, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '长期贷', '不查征信']}, {'controlInfo': None, 'creditAvg': 3000, 'creditMax': 5000, 'creditMin': 1000, 'desc': '123', 'icon': 'https://k8s-qsj-test.easyadmin.iask.cn/image/PID48620190105175124100.png', 'id': '133990660927815680', 'jumpType': 1, 'jumpUrl': 'https://pre.iask.cn/pg/preview/qsjRegVTS/index.html?hsinaif=third&amp;productId=1003&amp;channelid=s162301&amp;forClient=qsj&amp;abgroup=register_abgroup&amp;abconfigsid=100020103', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 0, 'loanTypeTagIds': '', 'loancycleMax': 14, 'loancycleMin': 7, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 2250, 'pname': '哈哈', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 0.05, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转']}, {'controlInfo': None, 'creditAvg': 2500, 'creditMax': 4000, 'creditMin': 1000, 'desc': '15', 'icon': 'https://preadmin.iask.cn/image/PID61120181207121335100.png', 'id': '123396370241519616', 'jumpType': 1, 'jumpUrl': 'https://pre.iask.cn/pg/preview/jumpPage/index.html?subLink=125992835073802240&amp;linkName=360%E5%AE%9D%E8%A2%8B&amp;random=52110&amp;sign=356276688a52d330ca987e5f5d8b2358&amp;out=1', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 30, 'loanTypeTagIds': '3f706a481e334b3c96e1f0a36d2c4bc1', 'loancycleMax': 7, 'loancycleMin': 1, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 4350, 'pname': 'jerryttttt', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 0.05, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转', '新口子']}, {'controlInfo': None, 'creditAvg': 500, 'creditMax': 500, 'creditMin': 500, 'desc': '审核放款，低利息快速下5万', 'icon': 'https://preadmin.iask.cn/image/PID35520181207121106100.png', 'id': '123395748146544640', 'jumpType': 1, 'jumpUrl': 'https://pre.iask.cn/pg/preview/jumpPage/index.html?hsinaif=third&amp;subLink=123457693709074432&amp;linkName=%E8%BF%9B%E9%87%91%E5%B2%81%E6%9C%88&amp;random=59058&amp;sign=b651e20f022f26b078d3d0dbaf45bd9e&amp;out=0', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 30, 'loanTypeTagIds': '3f706a481e334b3c96e1f0a36d2c4bc1', 'loancycleMax': 14, 'loancycleMin': 7, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 79598, 'pname': '精灵口袋', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 0.05, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转', '新口子']}, {'controlInfo': None, 'creditAvg': 17500, 'creditMax': 30000, 'creditMin': 5000, 'desc': '审核放款，低利息快速下5万', 'icon': 'https://preadmin.iask.cn/image/PID52720181207120913100.png', 'id': '123395274341187584', 'jumpType': 1, 'jumpUrl': 'https://pre.iask.cn/pg/preview/jumpPage/index.html?hsinaif=third&amp;subLink=123390701614497793&amp;linkName=%E4%BD%A9%E7%90%AA%E8%8A%B1%E8%8A%B1&amp;random=25816&amp;sign=4b313712668cae389ce38a534bb2f657&amp;out=1', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 30, 'loanTypeTagIds': '', 'loancycleMax': 14, 'loancycleMin': 7, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 16921, 'pname': '测试3', 'quotaTagId': '1e82fab4df60487397a3cb1b9ebed392', 'rates': 0.04, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['大额贷', '7天周转']}, {'controlInfo': None, 'creditAvg': 2750, 'creditMax': 5000, 'creditMin': 500, 'desc': '纯信用借款，一张身份证最快5分钟', 'icon': 'https://preadmin.iask.cn/image/PID70220181129143518100.png', 'id': '120533027101179904', 'jumpType': 1, 'jumpUrl': 'https://hwq.cjzc168.com/160692?hsinaif=third', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 30, 'loanTypeTagIds': '3f706a481e334b3c96e1f0a36d2c4bc1,e8afe93acd504736bfb5061a5849c691,4e0f5c2eb6a04b048ce3b3dadbb30139,49c03ea70c4d4b4b9e0d921da44f328f', 'loancycleMax': 7, 'loancycleMin': 7, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 10477, 'pname': '红呗', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 0.06, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转', '新口子', '不查征信', '芝麻分贷', '只需身份证']}, {'controlInfo': None, 'creditAvg': 4000, 'creditMax': 5000, 'creditMin': 3000, 'desc': '低利息贷款', 'icon': 'https://preadmin.iask.cn/image/PID16020181129111704100.png', 'id': '120482957316161536', 'jumpType': 1, 'jumpUrl': 'https://hwq.cjzc168.com/160692?hsinaif=third', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 30, 'loanTypeTagIds': '3f706a481e334b3c96e1f0a36d2c4bc1,e8afe93acd504736bfb5061a5849c691,4e0f5c2eb6a04b048ce3b3dadbb30139', 'loancycleMax': 14, 'loancycleMin': 7, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 6281, 'pname': '人人贷款', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 0.06, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转', '新口子', '不查征信', '芝麻分贷']}, {'controlInfo': None, 'creditAvg': 5500, 'creditMax': 10000, 'creditMin': 1000, 'desc': '豆腐干地方官府', 'icon': 'https://preadmin.iask.cn/image/PID74620181116162306100.png', 'id': '115912570481770496', 'jumpType': 1, 'jumpUrl': 'https://pre.iask.cn/pg/preview/jumpPage/index.html?subLink=115912273227251712&amp;linkName=will%E7%9A%84%E4%BA%A7%E5%93%81&amp;random=30518&amp;sign=1012636df08b739d51232e2646a51494&amp;out=0', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 30, 'loanTypeTagIds': '3f706a481e334b3c96e1f0a36d2c4bc1,e8afe93acd504736bfb5061a5849c691', 'loancycleMax': 111, 'loancycleMin': 11, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 8077, 'pname': 'will的产品', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 2.0, 'remark': '12', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转', '新口子', '不查征信']}, {'controlInfo': None, 'creditAvg': 5500, 'creditMax': 10000, 'creditMin': 1000, 'desc': '豆腐干地方官府', 'icon': 'https://preadmin.iask.cn/image/PID74620181116162306100.png', 'id': '115910907796750336', 'jumpType': 1, 'jumpUrl': 'https://pre.iask.cn/pg/preview/jumpPage/index.html?subLink=115910789265719298&amp;linkName=Jerry%E6%8A%93%E5%8F%96%E6%95%B0%E6%8D%AE2&amp;random=55151&amp;sign=22d44d006a1375404151a033f459f019&amp;out=0', 'loanCycleTagId': '63dc688f4ce849e0aef9e02b5d1febd7', 'loanTime': 30, 'loanTypeTagIds': '3f706a481e334b3c96e1f0a36d2c4bc1,e8afe93acd504736bfb5061a5849c691', 'loancycleMax': 111, 'loancycleMin': 11, 'loancycleUnit': 1, 'moduleId': '', 'moduleTypeId': '', 'number': 8026, 'pname': 'jerry抓取数据2', 'quotaTagId': 'f1f047a589a841988df5d8e5f24450bb', 'rates': 2.0, 'remark': '', 'status': 1, 'tags': '', 'tnameList': ['小额贷', '7天周转', '新口子', '不查征信']}, {'controlInfo': None, 'creditAvg': 2250, 'creditMax': 3000, 'creditMin': 1500, 'desc': '秒批通过率百分之80以上', 'icon': 'https://easyadmin.iask.com/images/image/PID53220181108140704100.jpg', 'id': '899', 'jumpType': 1, 'jumpUrl': 'https://likedai.tjdzjq.com/mobile/phoneverification?hsinaif=third&amp;par=BFD26852E81887683AD3E126811A11E0', 'loanCycleTagId': '', 'loanTime': 30, 'loanTypeTagIds': '', 'loancycleMax': 0, 'loancycleMin': 0, 'loancycleUnit': 0, 'moduleId': '', 'moduleTypeId': '', 'number': 6217, 'pname': '立刻贷', 'quotaTagId': '', 'rates': 0.03, 'remark': 'UV9', 'status': 1, 'tags': '', 'tnameList': []}]}, 'msg': 'ok'}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>QSJ.query_loan_product_test.QueryLoanProduct</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c11',1)">Detail</a></td>
+</tr>
+
+<tr id='pt11.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_loan_product_success</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.1')" >
+        pass</a>
+
+    <div id='div_pt11.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.1: {"code":"200","data":{"tagList":[{"defaultvalue":"","id":null,"key":"1003_c148abe378c84b4ebe1d854f05de3fd4","orderNo":1,"pcode":"1003","tid":"3f706a481e334b3c96e1f0a36d2c4bc1","type":"100","value":"新口子"},{"defaultvalue":"","id":null,"key":"1003_5c5577cc2f9347ecb13d1599cb2927bb","orderNo":2,"pcode":"1003","tid":"e8afe93acd504736bfb5061a5849c691","type":"100","value":"不查征信"},{"defaultvalue":"","id":null,"key":"1003_9934b20bf4ca4a2db47a5866318e1a30","orderNo":3,"pcode":"1003","tid":"4e0f5c2eb6a04b048ce3b3dadbb30139","type":"100","value":"芝麻分贷"},{"defaultvalue":"","id":null,"key":"1003_a587d67fb04b457583eb923a9a6ea6db","orderNo":4,"pcode":"1003","tid":"49c03ea70c4d4b4b9e0d921da44f328f","type":"100","value":"只需身份证"}],"searchInfo":{"hotProductList":null,"catogoryList":[{"description":"","ename":"测试分类","id":"69","jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL51420190110153458100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID95220190110155731100.png","remark":"测试"},{"description":"","ename":"大额贷款","id":"58","jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL64920190102155742100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID2820190103113547100.png","remark":"测试数据"},{"description":"","ename":"最新上线","id":"46","jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/qsjApp/loanlist.html?hsinaif=third&amp;id=9","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID11320190103113102100.png","remark":""},{"description":"","ename":"贷款大全","id":"47","jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/qsjApp/loanlist.html?id=5","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID64720190103113448100.png","remark":""},{"description":"","ename":"测试","id":"65","jumpType":1,"jumpUrl":"http://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL64920190102155742100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID55120190105134316100.png","remark":"测试"},{"description":"","ename":"芝麻分贷","id":"48","jumpType":1,"jumpUrl":"https://jie.iask.cn/pg/product/qsjApp/loanlist.html?id=23","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID26920190103113338100.png","remark":""},{"description":"","ename":"小额贷款","id":"59","jumpType":1,"jumpUrl":"http://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL64920190102155742100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID8720190103113652100.png","remark":""},{"description":"","ename":"保险超市","id":"62","jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL70020190102163656100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID59820190103114126100.png","remark":""},{"description":"","ename":"在线办卡","id":"60","jumpType":1,"jumpUrl":"https://k8s-qsj-test.jie.iask.cn/pg/qsjApp/loanlist.html?id=NPL70020190102163656100","picUrl":"https://k8s-qsj-test.easyadmin.iask.cn/image/PID57220190103113939100.png","remark":""}],"searchTips":"2.6.0"},"searchkeyList":{"sortList":[{"defaultvalue":"-1","id":null,"key":"106021","orderNo":1,"pcode":"10602","tid":"c61e2b0f1b16429da5df10e601790b01","type":"100","value":"综合排序"},{"defaultvalue":"tpb.creatime DESC","id":null,"key":"106022","orderNo":2,"pcode":"10602","tid":"c61e2b0f1b16429da5df10e601790b02","type":"100","value":"最新上线"},{"defaultvalue":"tpm.creditavg DESC, tpb.creatime DESC","id":null,"key":"106023","orderNo":3,"pcode":"10602","tid":"c61e2b0f1b16429da5df10e601790b03","type":"100","value":"额度高"},{"defaultvalue":"tpm.rates ASC, tpb.creatime DESC","id":null,"key":"106024","orderNo":4,"pcode":"10602","tid":"c61e2b0f1b16429da5df10e601790b04","type":"100","value":"利息低"},{"defaultvalue":"tpm.loantime ASC, tpb.creatime DESC","id":null,"key":"106025","orderNo":5,"pcode":"10602","tid":"c61e2b0f1b16429da5df10e601790b05","type":"100","value":"放款快"}],"moneyList":[{"defaultvalue":"-1","id":null,"key":"106011","orderNo":1,"pcode":"10601","tid":"c50e2b0f1b16429da5df10e601790b01","type":"100","value":"不限"},{"defaultvalue":"{\"creditmin\":\"1000\",\"creditmax\":\"3000\"}","id":null,"key":"106012","orderNo":2,"pcode":"10601","tid":"c50e2b0f1b16429da5df10e601790b02","type":"100","value":"1000-3000"},{"defaultvalue":"{\"creditmin\":\"3001\",\"creditmax\":\"5000\"}","id":null,"key":"106013","orderNo":3,"pcode":"10601","tid":"c50e2b0f1b16429da5df10e601790b03","type":"100","value":"3000-5000"},{"defaultvalue":"{\"creditmin\":\"5001\",\"creditmax\":\"10000\"}","id":null,"key":"106014","orderNo":4,"pcode":"10601","tid":"c50e2b0f1b16429da5df10e601790b04","type":"100","value":"5000-1万"},{"defaultvalue":"{\"creditmin\":\"10001\",\"creditmax\":\"50000\"}","id":null,"key":"106015","orderNo":5,"pcode":"10601","tid":"c50e2b0f1b16429da5df10e601790b05","type":"100","value":"1万-5万"},{"defaultvalue":"{\"creditmin\":\"50001\"}","id":null,"key":"106016","orderNo":6,"pcode":"10601","tid":"c50e2b0f1b16429da5df10e601790b06","type":"100","value":"5万以上"}],"cycleList":[{"defaultvalue":"-1","id":null,"key":"106001","orderNo":1,"pcode":"10600","tid":"c30e2b0f1b16429da5df10e601790b01","type":"100","value":"不限"},{"defaultvalue":"{\"loancyclemin\":\"7\",\"loancyclemax\":\"30\",\"loancycleunit\":\"1\"}","id":null,"key":"106002","orderNo":2,"pcode":"10600","tid":"c30e2b0f1b16429da5df10e601790b02","type":"100","value":"7-30天"},{"defaultvalue":"{\"loancyclemin\":\"1\",\"loancyclemax\":\"3\",\"loancycleunit\":\"2\"}","id":null,"key":"106003","orderNo":3,"pcode":"10600","tid":"c30e2b0f1b16429da5df10e601790b03","type":"100","value":"1-3个月"},{"defaultvalue":"{\"loancyclemin\":\"4\",\"loancyclemax\":\"6\",\"loancycleunit\":\"2\"}","id":null,"key":"106004","orderNo":4,"pcode":"10600","tid":"c30e2b0f1b16429da5df10e601790b04","type":"100","value":"3-6个月"},{"defaultvalue":"{\"loancyclemin\":\"7\",\"loancyclemax\":\"12\",\"loancycleunit\":\"2\"}","id":null,"key":"106005","orderNo":5,"pcode":"10600","tid":"c30e2b0f1b16429da5df10e601790b05","type":"100","value":"6-12个月"},{"defaultvalue":"{\"loancyclemin\":\"13\",\"loancycleunit\":\"2\"}","id":null,"key":"106006","orderNo":6,"pcode":"10600","tid":"c30e2b0f1b16429da5df10e601790b06","type":"100","value":"12个月以上"}]},"productList":[]},"msg":"ok"}
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>15</td>
+    <td class="text text-success">9</td>
+    <td class="text text-danger">0</td>
+    <td class="text text-warning">6</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+    <script type="text/javascript">
+var data = [
+	{
+		value: 6,
+		color: "#ebccd1",
+		label: "Error",
+		labelColor: 'white',
+		labelFontSize: '16'
+	},
+	{
+		value : 0,
+		color : "#faebcc",
+		label: "Fail",
+		labelColor: 'white',
+		labelFontSize: '16'
+	},
+	{
+		value : 9,
+		color : "#d6e9c6",
+		label : "Pass",
+		labelColor: 'white',
+		labelFontSize: '16'
+	}			
+]
+
+var newopts = {
+     animationSteps: 100,
+ 		animationEasing: 'easeInOutQuart',
+}
+
+//Get the context of the canvas element we want to select
+var ctx = document.getElementById("myChart").getContext("2d");
+
+var myNewChart = new Chart(ctx).Pie(data,newopts);
+
+</script>
+	
+</body>
+</html>
