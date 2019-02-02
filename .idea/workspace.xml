@@ -1,70 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c6f9c80-bfa5-40cc-9e84-39cc42d46577" name="Default" comment="update all">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/Administrator/init_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/Administrator/login_by_code_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/Administrator/login_by_pass_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/Administrator/send_phone_code_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/Business/get_business_product_list_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/Business/get_yjkd_home_product_list.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/Business/get_yjkd_product_list_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/QSJ/QueryLoanProductByListId.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/QSJ/get_credit_helper_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/QSJ/get_home_product_list_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/QSJ/get_me_info_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/QSJ/get_new_loan_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interface/QSJ/query_loan_product_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/2019-02-02 17_31_54_result.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/2019-02-02 17_32_23_result.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/report/2019-02-02 17_32_39_result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Funcl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QSJ.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Global_base/global_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/Global_base/global_base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/db_config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_fixture/test_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_fixture/test_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_fixture/test_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_fixture/test_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Business/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/address_list_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/address_one_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/default_address_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/delete_address_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/new_address_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/update_address_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/update_default_address_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Administrator/auth_captcha_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Administrator/auth_logout_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Administrator/auth_logout_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Administrator/auth_me_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Administrator/user_login_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/AppSerials/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/QSJ/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/AppSerials/get_all_serials_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/AppSerials/get_one_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/AppSerials/serials_store_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/FunCode/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/FunCode/funCode_getInfo_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/FunCode/funCode_getProductInfo_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Newsletter/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Newsletter/subscribe_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/create_order_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_checkout_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_getList_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_getNumber_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_pay_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_refund_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_show_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/ProductsManagement/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/ProductsManagement/product_info_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Public_address/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Public_address/city_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Public_address/district_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Public_address/province_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_tests.py" afterDir="false" />
-    </list>
+    <list default="true" id="1c6f9c80-bfa5-40cc-9e84-39cc42d46577" name="Default" comment="update all" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +131,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -372,9 +313,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
+            <path>
+              <item name="QSJ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qsjInterface" type="462c0819:PsiDirectoryNode" />
+            </path>
             <path>
               <item name="QSJ" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
@@ -383,7 +329,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -728,6 +673,7 @@
       <workItem from="1548986393002" duration="28763000" />
       <workItem from="1549100511869" duration="790000" />
       <workItem from="1549101559177" duration="98000" />
+      <workItem from="1549102880968" duration="222000" />
     </task>
     <task id="LOCAL-00001" summary="first commmit">
       <created>1538289967373</created>
@@ -792,7 +738,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545216652077</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update all">
+      <created>1549102902240</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1549102902240</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -828,7 +781,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130190000" />
+    <option name="totallyTimeSpent" value="130412000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -841,9 +794,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20788912" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21002132" />
       <window_info id="Structure" order="1" weight="0.2494382" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -855,8 +807,8 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50316167" side_tool="true" weight="0.32880434" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.3299435" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3264642" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4968383" weight="0.32741398" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3253796" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4968383" visible="true" weight="0.3264642" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -1183,7 +1135,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
