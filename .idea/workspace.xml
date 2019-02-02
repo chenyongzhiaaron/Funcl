@@ -2,10 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c6f9c80-bfa5-40cc-9e84-39cc42d46577" name="Default" comment="update all">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/Administrator/init_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/Administrator/login_by_code_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/Administrator/login_by_pass_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/Administrator/send_phone_code_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/Business/get_business_product_list_test.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/interface/Business/get_yjkd_home_product_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/Business/get_yjkd_product_list_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/QSJ/QueryLoanProductByListId.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/QSJ/get_credit_helper_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/QSJ/get_home_product_list_test.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/interface/QSJ/get_me_info_test.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/interface/QSJ/get_new_loan_product.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/interface/QSJ/query_loan_product_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/report/2019-02-02 17_31_54_result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/report/2019-02-02 17_32_23_result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/report/2019-02-02 17_32_39_result.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Funcl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QSJ.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
@@ -14,7 +28,7 @@
       <change beforePath="$PROJECT_DIR$/db_config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/db_config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_fixture/test_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_fixture/test_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_fixture/test_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db_fixture/test_db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Address/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Administrator/init_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Address/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Business/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/Address/address_list_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/Address/address_one_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/Address/default_address_test.py" beforeDir="false" />
@@ -22,20 +36,20 @@
       <change beforePath="$PROJECT_DIR$/interface/Address/new_address_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/Address/update_address_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/Address/update_default_address_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Administrator/auth_captcha_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Administrator/send_phone_code_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Administrator/auth_captcha_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/Administrator/auth_logout_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Administrator/auth_logout_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/Administrator/auth_me_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Administrator/user_login_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Administrator/login_by_pass_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/AppSerials/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Administrator/login_by_code_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Administrator/user_login_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/AppSerials/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/QSJ/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/AppSerials/get_all_serials_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/AppSerials/get_one_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/AppSerials/serials_store_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/FunCode/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Business/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/FunCode/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/FunCode/funCode_getInfo_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/FunCode/funCode_getProductInfo_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Newsletter/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Business/get_business_product_list_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Newsletter/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/Newsletter/subscribe_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/Business/get_yjkd_product_list_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/OrderManagement/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/OrderManagement/create_order_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_checkout_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_getList_test.py" beforeDir="false" />
@@ -43,12 +57,12 @@
       <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_pay_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_refund_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/OrderManagement/order_show_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/ProductsManagement/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/QSJ/QueryLoanProductByListId.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/ProductsManagement/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/ProductsManagement/product_info_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Public_address/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/QSJ/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Public_address/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/interface/Public_address/city_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Public_address/district_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/QSJ/get_credit_helper_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface/Public_address/province_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/interface/QSJ/get_home_product_list_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Public_address/district_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/Public_address/province_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_tests.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -167,19 +181,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interface/Administrator/init_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="437">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -187,10 +192,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface/Business/get_business_product_list_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
+            <state relative-caret-position="342">
               <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -202,7 +212,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface/Administrator/login_by_pass_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
+            <state relative-caret-position="361">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -214,7 +224,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface/Administrator/login_by_code_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="228">
               <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -226,7 +236,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface/Business/get_yjkd_product_list_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="361">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -238,7 +248,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface/Administrator/send_phone_code_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
+            <state relative-caret-position="532">
               <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -250,7 +260,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface/QSJ/get_credit_helper_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
+            <state relative-caret-position="456">
               <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -267,7 +277,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface/Business/get_yjkd_home_product_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
+            <state relative-caret-position="418">
               <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -362,7 +372,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -374,12 +383,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="C:/Git/git-cmd.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -716,6 +726,8 @@
       <workItem from="1546963284709" duration="1676000" />
       <workItem from="1548670992632" duration="18856000" />
       <workItem from="1548986393002" duration="28763000" />
+      <workItem from="1549100511869" duration="790000" />
+      <workItem from="1549101559177" duration="98000" />
     </task>
     <task id="LOCAL-00001" summary="first commmit">
       <created>1538289967373</created>
@@ -816,7 +828,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129302000" />
+    <option name="totallyTimeSpent" value="130190000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -829,8 +841,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20788912" />
       <window_info id="Structure" order="1" weight="0.2494382" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -842,7 +855,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50316167" side_tool="true" weight="0.32880434" />
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.3299435" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3264642" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3264642" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4968383" weight="0.32741398" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -930,9 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1008,13 +1018,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Administrator/auth_me_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Administrator/auth_me_test.py" />
     <entry file="file://$PROJECT_DIR$/interface/Administrator/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1088,79 +1092,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface/QSJ/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/QSJ/get_credit_helper_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Business/get_yjkd_product_list_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Business/get_yjkd_home_product_list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Business/get_business_product_list_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Administrator/send_phone_code_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Administrator/login_by_pass_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/interface/Administrator/login_by_code_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/interface/Administrator/init_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -1170,13 +1101,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="437">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Business/get_business_product_list_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Administrator/login_by_pass_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Administrator/login_by_code_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Business/get_yjkd_product_list_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Administrator/send_phone_code_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/QSJ/get_credit_helper_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/QSJ/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface/Business/get_yjkd_home_product_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
