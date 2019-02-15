@@ -11,7 +11,7 @@ sys.path.append('./db_fixture')
 sys.path.append('./Global_bse')
 
 # 指定测试用例为当前文件夹下的 interface 目录
-test_dir = '.\interface'
+test_dir = './interface'
 discover = unittest.defaultTestLoader.discover(test_dir, pattern='*.py')
 
 if __name__ == "__main__":

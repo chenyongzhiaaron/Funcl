@@ -59,7 +59,7 @@
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_update_address.coverage" NAME="Unittests in update address Coverage Results" MODIFIED="1543489940498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_update_default_address_py.coverage" NAME="Unittests in update default address.py Coverage Results" MODIFIED="1545187222166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Address" />
     <SUITE FILE_PATH="coverage/Funcl$subscribe.coverage" NAME="subscribe Coverage Results" MODIFIED="1540961190413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Newsletter" />
-    <SUITE FILE_PATH="coverage/QSJ$run_tests.coverage" NAME="run_tests Coverage Results" MODIFIED="1550224875364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/QSJ$run_tests.coverage" NAME="run_tests Coverage Results" MODIFIED="1550228241388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_order_getList_test_py.coverage" NAME="Unittests in order_getList_test.py Coverage Results" MODIFIED="1545297756510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/OrderManagement" />
     <SUITE FILE_PATH="coverage/Funcl$auth_captcha.coverage" NAME="auth_captcha Coverage Results" MODIFIED="1538278537887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Administrator" />
     <SUITE FILE_PATH="coverage/Funcl$Unittests_in_auth_captcha_py.coverage" NAME="Unittests in auth_captcha.py Coverage Results" MODIFIED="1545034566190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface/Administrator" />
@@ -123,8 +123,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+            <state relative-caret-position="361">
+              <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -677,7 +677,7 @@
       <workItem from="1549100511869" duration="790000" />
       <workItem from="1549101559177" duration="98000" />
       <workItem from="1549102880968" duration="222000" />
-      <workItem from="1550216506742" duration="1183000" />
+      <workItem from="1550216506742" duration="4599000" />
     </task>
     <task id="LOCAL-00001" summary="first commmit">
       <created>1538289967373</created>
@@ -749,7 +749,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549102902240</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update all">
+      <created>1550224998545</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1550224998545</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -785,7 +792,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131595000" />
+    <option name="totallyTimeSpent" value="135011000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -798,14 +805,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21215352" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21215352" />
       <window_info id="Structure" order="1" weight="0.2494382" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32934782" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28308025" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28308025" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39479393" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1138,8 +1144,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/run_tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        <state relative-caret-position="361">
+          <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
